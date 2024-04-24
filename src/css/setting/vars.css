@@ -1,0 +1,44 @@
+:root {
+    /* 메인영어 폰트 */
+    --mainEng-font: 'JalnanGothic';
+    /* 메인한글 폰트 */
+    --introKor-font: 'KCC-eunyoung';
+    --mainKor-font: 'GmarketSansMedium';
+    /* 메인넘버 폰트 */
+    --mainNum-font: 'GmarketSansMedium';
+    /* 메인bg color */
+    --main-color-blue: #1266CA;
+    --sub-color-blue: #4480C7;
+    --main-color-yellow: #FFC700;
+    --background-color: #F6F6F6;
+    --white: #ffffff;
+    --black: #000;
+    --black100: #CCCCCC;
+    --black200: #767676;
+    --black300: #404040;
+    --black400: #2F2F2F;
+
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+    /* 폰트를 부드럽게 렌더링하기위한 속성 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+body {
+    color: var(--black);
+    background-color: var(--mainBg-color);
+}
