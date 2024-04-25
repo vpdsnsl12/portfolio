@@ -10,4 +10,5 @@ window.addEventListener('load',function(){
   project()
   intro()
   work()
+  contact()
 })
