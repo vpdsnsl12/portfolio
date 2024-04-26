@@ -1,0 +1,108 @@
+#work {
+    height: 50vw;
+    margin: auto;
+    margin-top: 10vw;
+}
+
+#work .work_box {
+    display: flex;
+    width: 85vw;
+    margin: auto;
+    justify-content: space-around;
+
+}
+
+#work .work_text_box .work_text {
+    display: none;
+}
+
+#work .work_text_box .work_text.on {
+    display: block;
+}
+
+#work .work_text_box .work_text span {
+    display: block;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    width: 8vw;
+    height: 3vw;
+    text-align: center;
+    line-height: 3.3vw;
+    font-size: 1vw;
+    margin-left: -.5vw;
+}
+#work .work_text_box .work_text h3{
+    margin: 1vw 0;
+    color: var(--main-color-blue);
+    font-size: 3.5vw;
+}
+#work .work_text_box .work_text h4{
+    color: var(--sub-color-blue);
+    font-size: 1.5vw;
+}
+#work .work_text_box .work_text p{
+    font-size: 1vw;
+    color: var(--black300);
+    line-height: 2vw;
+}
+#work .work_text_box .work_text p.day{
+    line-height: 5vw;
+}
+#work .work_text_box .work_text span::before {
+    content: '';
+    background-image: url(../../img/project-yellow-logo.png);
+    width: 8vw;
+    height: 3vw;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+#work .work_text_box .count{
+    margin-top: 3vw;
+    width: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+#work .work_text_box .count img{
+    width: 2vw;
+}
+#work .work_text_box .count img:nth-child(2){
+    width: 2vw;
+    transform: rotate(180deg);
+}
+#work .work_img_box div {
+    display: none;
+}
+
+#work .work_img_box div.on {
+    display: block;
+}
+
+#work .work_img_box div {
+    width: 50vw;
+}
+#work .work_img_box div img{
+    border-radius: 1vw;
+}
+#work .work_logo {
+    display: flex;
+    margin: 5vw 0;
+    gap: 2vw;
+}
+
+#work .work_logo div {
+    filter: grayscale(1);
+}
+#work .work_logo div:hover{
+    filter: grayscale(0);
+
+}
+
+#work .work_logo div.active {
+    filter: grayscale(0);
+}
