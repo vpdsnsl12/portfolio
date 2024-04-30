@@ -9,7 +9,6 @@
   </head>
 
   <body>
-    <script type="module" src="./src/js/main.js"></script>
 
     <section id="intro">
       <div class="intro_inner">
@@ -152,8 +151,8 @@
           <img src="./src/img/main-img (6).png" style="width: 100%" />
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <a class="prev" id="prevButton">❮</a>
+        <a class="next" id="nextButton">❯</a>
 
         <div class="caption-container">
           <p id="caption"></p>
@@ -165,7 +164,7 @@
               class="demo cursor"
               src="./src/img/logo-img (1).png"
               style="width: 100%"
-              onclick="currentSlide(1)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -174,7 +173,7 @@
               class="demo cursor"
               src="./src/img/logo-img (2).png"
               style="width: 100%"
-              onclick="currentSlide(2)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -183,7 +182,7 @@
               class="demo cursor"
               src="./src/img/logo-img (3).png"
               style="width: 100%"
-              onclick="currentSlide(3)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -192,7 +191,7 @@
               class="demo cursor"
               src="./src/img/logo-img (4).png"
               style="width: 100%"
-              onclick="currentSlide(4)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -201,7 +200,7 @@
               class="demo cursor"
               src="./src/img/logo-img (5).png"
               style="width: 100%"
-              onclick="currentSlide(5)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -210,7 +209,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -219,7 +218,7 @@
               class="demo cursor"
               src="./src/img/logo-img (7).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -228,7 +227,7 @@
               class="demo cursor"
               src="./src/img/logo-img (8).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -237,7 +236,7 @@
               class="demo cursor"
               src="./src/img/logo-img (9).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -246,7 +245,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -255,7 +254,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -264,7 +263,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -273,7 +272,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -282,7 +281,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -291,7 +290,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -300,7 +299,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -309,7 +308,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -318,7 +317,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -327,7 +326,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -336,7 +335,7 @@
               class="demo cursor"
               src="./src/img/logo-img (6).png"
               style="width: 100%"
-              onclick="currentSlide(6)"
+              id="currentSlide"
               alt=""
             />
           </div>
@@ -347,45 +346,44 @@
     <section id="about_me"></section>
     <section id="contact"></section>
 
+
+    <script type="module" src="./src/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
+        // let slideIndex = 1;
+        // showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
+        // function plusSlides(n) {
+        //   showSlides((slideIndex += n));
+        // }
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
+        // function currentSlide(n) {
+        //   showSlides((slideIndex = n));
+        // }
 
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("demo");
-        let captionText = document.getElementById("caption");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-      }
+        // function showSlides(n) {
+        //   let i;
+        //   let slides = document.getElementsByClassName("mySlides");
+        //   let dots = document.getElementsByClassName("demo");
+        //   let captionText = document.getElementById("caption");
+        //   if (n > slides.length) {
+        //     slideIndex = 1;
+        //   }
+        //   if (n < 1) {
+        //     slideIndex = slides.length;
+        //   }
+        //   for (i = 0; i < slides.length; i++) {
+        //     slides[i].style.display = "none";
+        //   }
+        //   for (i = 0; i < dots.length; i++) {
+        //     dots[i].className = dots[i].className.replace(" active", "");
+        //   }
+        //   slides[slideIndex - 1].style.display = "block";
+        //   dots[slideIndex - 1].className += " active";
+        //   captionText.innerHTML = dots[slideIndex - 1].alt;
+        // }
     </script>
   </body>
 </html>
