@@ -1,39 +1,60 @@
+// export function work() {
+//   const swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 10,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//   });
+
+//   const swiper2 = new Swiper(".mySwiper2", {
+//     spaceBetween: 10,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     thumbs: {
+//       swiper: swiper,
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       type: "fraction",
+//     },
+//   });
+// }
 export function work() {
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    function currentSlide(n) {
-        showSlides((slideIndex = n));
-    }
-    document.getElementById("currentSlide").addEventListener("click", function () {
-        currentSlide(slideIndex); 
-    })
-    document.getElementById("prevButton").addEventListener("click", function () {
-        plusSlides(-1);
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      freeMode: true,
+      watchSlidesProgress: true,
     });
-
-    document.getElementById("nextButton").addEventListener("click", function () {
-        plusSlides(1);
+  
+    const swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
     });
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("demo");
-        let captionText = document.getElementById("caption");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-}
+    swiper2.on('slideChange', function () {
+      // 현재 활성화된 swiper-slide의 인덱스 가져오기
+      let activeIndex = swiper2.activeIndex; // 변수명 수정
+    
+      // 모든 .text 요소의 클래스 제거
+      let texts = document.querySelectorAll('#work .text-box .text');
+      texts.forEach(function (text) {
+        text.classList.remove('on');
+      });
+    
+      texts[activeIndex].classList.add('on');
+    });
+  }
+  
+  // 함수 호출
+  work();
+  

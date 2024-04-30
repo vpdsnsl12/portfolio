@@ -1,197 +1,156 @@
-/* #work {
-    height: 50vw;
-    margin: auto;
-    margin-top: 10vw;
-}
-
-#work .work_box {
-    display: flex;
-    width: 85vw;
-    margin: auto;
-    justify-content: space-around;
-
-}
-
-#work .work_text_box .work_text {
-    display: none;
-}
-
-#work .work_text_box .work_text.on {
-    display: block;
-}
-
-#work .work_text_box .work_text span {
-    display: block;
-    color: var(--white);
-    position: relative;
-    z-index: 1;
-    width: 8vw;
-    height: 3vw;
-    text-align: center;
-    line-height: 3.3vw;
-    font-size: 1vw;
-    margin-left: -.5vw;
-}
-#work .work_text_box .work_text h3{
-    margin: 1vw 0;
-    color: var(--main-color-blue);
-    font-size: 3.5vw;
-}
-#work .work_text_box .work_text h4{
-    color: var(--sub-color-blue);
-    font-size: 1.5vw;
-}
-#work .work_text_box .work_text p{
-    font-size: 1vw;
-    color: var(--black300);
-    line-height: 2vw;
-}
-#work .work_text_box .work_text p.day{
-    line-height: 5vw;
-}
-#work .work_text_box .work_text span::before {
-    content: '';
-    background-image: url(../../img/project-yellow-logo.png);
-    width: 8vw;
-    height: 3vw;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    background-repeat: no-repeat;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-#work .work_text_box .count{
-    margin-top: 3vw;
-    width: 10vw;
-    display: flex;
-    justify-content: space-between;
-}
-#work .work_text_box .count img{
-    width: 2vw;
-}
-#work .work_text_box .count img:nth-child(2){
-    width: 2vw;
-    transform: rotate(180deg);
-}
-#work .work_img_box div {
-    display: none;
-}
-
-#work .work_img_box div.on {
-    display: block;
-}
-
-#work .work_img_box div {
-    width: 50vw;
-}
-#work .work_img_box div img{
-    border-radius: 1vw;
-}
-#work .work_logo {
-    display: flex;
-    margin: 5vw 0;
-    gap: 2vw;
-}
-
-#work .work_logo div {
-    filter: grayscale(1);
-}
-#work .work_logo div:hover{
-    filter: grayscale(0);
-
-}
-
-#work .work_logo div.active {
-    filter: grayscale(0);
-} */
-#work {
-    height: 50vw;
-    margin: auto;
-    margin-top: 10vw;
-}
-.container {
+#work{
   position: relative;
+  margin-top: 8vw;
 }
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
+#work .text-box{
+  width: 30vw;
+  margin-left: 8vw;
+  padding: 0 3vw;
 }
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
+#work .text-box .text{display: none;}
+#work .text-box .text.on{display: block;}
+#work .text-box span.lego{
+  position: relative;
+  display: block;
+  margin-bottom: 3vw;
+  z-index: 1;
+  line-height: 3vw;
+  color: var(--white);
+  margin-left: .5vw;
 }
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+#work .text-box span.lego::after{
+  content: '';
+  background-image: url(../../img/project-yellow-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10vw;
+  height: 3vw;
   position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  left: -1.2vw;
+  z-index: -1;
+}
+#work .text-box h2{
+  font-size: 2.5vw;
+  color: var(--main-color-blue);
+  margin-bottom: .5vw;
+}
+#work .text-box h3{
+  font-size: 1.5vw;
+  color: var(--sub-color-blue);
+  margin-bottom: .5vw;
+}
+#work .text-box p{
+  font-size: 1vw;
+  color: var(--black300);
+}
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
+.swiper-slide {
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-.row{
-    display: flex;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 100px;
-  scrollbar-width: ;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.active,
-.demo:hover {
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 3vw 0;
+  width: 200%;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  border-radius: 99px;
+  margin: 2vw;
+}
+
+.mySwiper .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flex{
+  display: flex;
+}
+.swiper-button-next, .swiper-button-prev{
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  right: 0;
+  top: 13vw;
+  cursor: pointer;
+}
+.swiper-button-next::after{
+  content: '>';
+  color: white;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-button-prev::after{
+  content: '<';
+  color: white;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination{
+  position: absolute;
+  left: 11vw;
+  top: 28vw;
+  color: var(--black200);
+}
+.swiper-pagination-current{
+  color: var(--main-color-yellow);
+}
+.mySwiper2 {
+  width: 50vw;
+  height: 30vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: 5vw;
+}
+.mySwiper2 .swiper-wrapper .swiper-slide{
+  width: 50vw;
+}
+.mySwiper2 .swiper-wrapper .swiper-slide img{
+  width: 50vw;
+  border-radius: 1vw;
 }
