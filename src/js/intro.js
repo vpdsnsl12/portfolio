@@ -1,5 +1,5 @@
 export function intro() {
-    const duration = 2; 
+    const duration = 1.5; 
     const titles = document.querySelectorAll('.intro_title h1');
     const initialPositions = [
         { top: '49%', left: '57%' },
