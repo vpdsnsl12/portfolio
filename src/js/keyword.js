@@ -13,16 +13,18 @@ export function keyword() {
     }
   }
 
-  let item1 = document.querySelector(".title_keyword h2");
+  let item1 = document.querySelectorAll(".title_keyword h2");
   let item2 = document.querySelector(".text_box .text");
 
-  gsap.to(item1, {
-    scrollTrigger: {
-      trigger: item1,
-      start: "top 70%",
-      toggleClass: { targets: item1, className: "active" },
-      scrub: 1,
-    },
+  item1.forEach((item, index) => {
+    gsap.to(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: "top 70%",
+        toggleClass: { targets: item, className: "active" },
+        scrub: 1,
+      },
+    });
   });
   gsap.to(item2, {
     scrollTrigger: {

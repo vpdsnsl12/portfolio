@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/img/main-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEGO PORTFOLIO</title>
-    <link rel="stylesheet" href="./src/css/style.css" />
-  </head>
 
-  <body>
-    <section id="intro">
-      <div class="intro_inner">
-        <div class="lego_font">
-          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (12).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (13).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (14).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (15).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (16).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
-          <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
-        </div>
-        <div class="intro_title">
-          <h1>을 현실로,</h1>
-          <h1>코드를</h1>
-          <h1>하는 건축가</h1>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/img/main-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEGO PORTFOLIO</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    #work .swiper-pagination-fraction {
+      width: 5vw;
+      left: 10.5vw;
+      bottom: 17vw;
+      font-size: 1vw;
+      color: var(--black200);
+    }
+  </style>
+</head>
+
+<body>
+  <section id="intro">
+    <div class="intro_inner">
+      <div class="lego_font">
+        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (12).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (13).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (14).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (15).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (16).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
+        <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
       </div>
-    </section>
-    <section id="keyword" class="keyword">
-      <div class="title_keyword">
-        <h2>Infinite</h2>
-        <h3>무한한 잠재력</h3>
+      <div class="intro_title">
+        <h1>을 현실로,</h1>
+        <h1>코드를</h1>
+        <h1>하는 건축가</h1>
       </div>
-      <div class="text_box">
-        <span class="text"></span><span class="blink">|</span>
-      </div>
-    </section>
-    <section id="work">
-      <div class="work-wrap flex">
-        <div class="text-box">
-          <div class="text on">
+    </div>
+  </section>
+  <section id="keyword" class="keyword">
+    <div class="title_keyword">
+      <h2>Infinite</h2>
+      <h3>무한한 잠재력</h3>
+    </div>
+    <div class="text_box">
+      <span class="text"></span><span class="blink">|</span>
+    </div>
+  </section>
+  <section id="work">
+    <div class="work-wrap flex">
+      <div class="text-box">
+        <div class="text on">
           <span class="lego">리뉴얼페이지1</span>
           <h2>Wiggle Wiggle</h2>
           <h3>작업물 관련 한줄 멘트</h3>
@@ -77,7 +88,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지2</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀2</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -87,7 +98,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지3</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀3</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -97,7 +108,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지4</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀4</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -107,7 +118,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지5</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀5</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -117,7 +128,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지6</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀6</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -127,7 +138,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지7</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀7</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -137,7 +148,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지8</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀8</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -147,7 +158,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지9</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀9</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -157,7 +168,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지10</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀10</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -167,7 +178,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지11</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀11</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -177,7 +188,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지12</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀12</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -187,7 +198,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지13</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀13</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -197,7 +208,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지14</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀14</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -207,7 +218,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지15</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀15</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -217,7 +228,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지16</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀16</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -227,7 +238,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지17</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀17</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -237,7 +248,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지18</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀18</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -247,7 +258,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지19</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀19</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -257,7 +268,7 @@
         </div>
         <div class="text">
           <span class="lego">리뉴얼페이지20</span>
-          <h2>Wiggle Wiggle</h2>
+          <h2>타이틀20</h2>
           <h3>작업물 관련 한줄 멘트</h3>
           <p>
             어떤 점을 고려했는지 등 <br>
@@ -265,149 +276,277 @@
             리뉴얼 된 부분에 대한 내용 첨부
           </p>
         </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="swiper mySwiper2">
-          <div class="swiper-wrapper flex">
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (20).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (19).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (18).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (17).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (16).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (15).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (14).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (13).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (12).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (11).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (10).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (9).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (8).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (7).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (6).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (5).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (4).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (3).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (2).png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (1).png" />
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div thumbsSlider="" class="swiper mySwiper">
-        <div class="swiper-wrapper flex">
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./src/img/./logo-img (1).png" />
+            <img src="./src/img/main-img (20).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (2).png" />
+            <img src="./src/img/main-img (19).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (3).png" />
+            <img src="./src/img/main-img (18).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (4).png" />
+            <img src="./src/img/main-img (17).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (5).png" />
+            <img src="./src/img/main-img (16).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (6).png" />
+            <img src="./src/img/main-img (15).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (7).png" />
+            <img src="./src/img/main-img (14).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (8).png" />
+            <img src="./src/img/main-img (13).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (9).png" />
+            <img src="./src/img/main-img (12).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (10).png" />
+            <img src="./src/img/main-img (11).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/./logo-img (11).png" />
+            <img src="./src/img/main-img (10).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (12).png" />
+            <img src="./src/img/main-img (9).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (13).png" />
+            <img src="./src/img/main-img (8).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (14).png" />
+            <img src="./src/img/main-img (7).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (15).png" />
+            <img src="./src/img/main-img (6).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (16).png" />
+            <img src="./src/img/main-img (5).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (17).png" />
+            <img src="./src/img/main-img (4).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (18).png" />
+            <img src="./src/img/main-img (3).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (19).png" />
+            <img src="./src/img/main-img (2).png" />
           </div>
           <div class="swiper-slide">
-            <img src="./src/img/logo-img (20).png" />
+            <img src="./src/img/main-img (1).png" />
           </div>
         </div>
-      </div>
-    </section>
-    <section id="project"></section>
-    <section id="about_me"></section>
-    <section id="contact"></section>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
-    <script type="module" src="./src/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </body>
+      </div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./src/img/./logo-img (1).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (2).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (3).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (4).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (5).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (6).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (7).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (8).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (9).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (10).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/./logo-img (11).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (12).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (13).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (14).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (15).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (16).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (17).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (18).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (19).png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/logo-img (20).png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="keyword" class="keyword">
+    <div class="title_keyword">
+      <h2>Concentration</h2>
+      <h3>멈추지않고 달리다</h3>
+    </div>
+    <div class="text_box">
+      <span class="text2"></span><span class="blink">|</span>
+    </div>
+  </section>
+  <section id="project">
+    <div class="project-wrap1">
+      <div class="text-box on">
+        <p>WEB</p>
+        <h2>여기어때 리뉴얼</h2>
+      </div>
+      <div class="text-box">
+        <p>APP</p>
+        <h2>GET GOAL</h2>
+      </div>
+      <div class="text-box">
+        <p>WEB</p>
+        <h2>청와대</h2>
+      </div>
+      <div class="swiper mySwiper3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./src/img/box.png" />
+            <div class="text">
+              <h3>더 직관적이고 <br> 취향저격적인1</h3>
+              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+              <span><a href="">피그마 작업물 보기</a></span>
+              <img src="./src/img/project-img.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/img/box.png" />
+            <div class="text">
+              <h3>더 직관적이고 <br> 취향저격적인2</h3>
+              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+              <span><a href="">피그마 작업물 보기</a></span>
+              <img src="./src/img/project-img3.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/img/box.png" />
+            <div class="text">
+              <h3>더 직관적이고 <br> 취향저격적인3</h3>
+              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+              <span><a href="">피그마 작업물 보기</a></span>
+              <img src="./src/img/project-img2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <div class="project-wrap2">
+      <h1><img src="./src/img/project.png" alt=""></h1>
+      <h3>프로세스 살펴보기</h3>
+      <div class="box">
+        <p><a href="">리뉴얼 이전페이지</a></p>
+        <p><a href="">리뉴얼 이후페이지</a></p>
+      </div>
+    </div>
+  </section>
+  <section id="keyword" class="keyword">
+    <div class="title_keyword">
+      <h2>Flexibility</h2>
+      <h3>조립과 해체</h3>
+    </div>
+    <div class="text_box">
+      <span class="text3"></span><span class="blink">|</span>
+    </div>
+  </section>
+  <section id="about_me">
+    <h1><img src="./src/img/aboutme.png" alt=""></h1>
+    <div class="bg-img">
+      <img src="./src/img/about-bg.png" alt="">
+    </div>
+    <div class="about-arrow">
+      <a class="left" href=""><img src="./src/img/arrow (2).png" alt=""></a>
+      <a class="right" href=""><img src="./src/img/arrow (2).png" alt=""></a>
+    </div>
+    <div class="text-box flex">
+      <div class="text on">
+        <h2>2017</h2>
+        <h3>일본에서의 유학생활 시작</h3>
+        <p>도쿄 갤럭시 어학원</p>
+        <p>JLPT N1급 취득</p>
+        <p>다양한 아르바이트를 통해 수많은 환경해서 적응해본 경험</p>
+      </div>
+      <div class="text">
+        <h2>2019</h2>
+        <h3>무사시노 대학생활</h3>
+        <p>일본어 스피치 대회 최우수상</p>
+        <p>꾸준한 성적향상으로 성적장학금 수여</p>
+      </div>
+      <div class="text">
+        <h2>2023.04</h2>
+        <h3>대학 졸업후 한국으로</h3>
+      </div>
+      <div class="text">
+        <h2>2023.6</h2>
+        <h3>서울에서의 생활</h3>
+        <p>마케팅 대행사에서의 경험</p>
+      </div>
+      <div class="text">
+        <h2>2023.11</h2>
+        <h3>국비지원교육 시작</h3>
+        <p>UI/UX 웹디자인 웹퍼블리셔<br>
+        프론트엔드 전문가 양성반</p>
+  
+      </div>
+      <div class="text">
+        <h2>2024.05</h2>
+        <h3>국비지원교육 수료</h3>
+      </div>
+    </div>
+  </section>
+  <section id="contact"></section>
+
+  <script type="module" src="./src/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
 </html>

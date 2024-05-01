@@ -1,0 +1,64 @@
+#about_me{
+    position: relative;
+    height: 45vw;
+}
+#about_me h1{
+    width: 20vw;
+    margin: auto;
+}
+#about_me h1 img{
+    width: 100%;
+}
+#about_me .bg-img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#about_me .text-box{
+position: relative;
+height: 15vw;
+left: 39.5vw;
+top: 3vw;
+gap: 10vw;
+text-align: left;
+width: 300%;
+}
+#about_me .text-box .text{
+    width: 40vw;
+    opacity: 0;
+}
+#about_me .text-box .text.on{
+    opacity: 1;
+}
+#about_me h2{
+    color: var(--main-color-blue);
+    font-size: 3.2vw;
+    line-height: 4vw;
+}
+
+#about_me h3{
+    color: var(--black400);
+    font-size: 1.6vw;
+    line-height: 3vw;
+
+}
+#about_me p{
+    color: var(--black200);
+    font-size: 1vw;
+    line-height: 2vw;
+}
+.about-arrow a{
+    width: 3vw;
+    position: absolute;
+    opacity: .5;
+    right: 25vw;
+    top: 12vw;
+    z-index: 1;
+}
+.about-arrow a.left img{
+    transform: scale(-1);
+    
+}
+.about-arrow a.left{
+    right: 20vw;
+}

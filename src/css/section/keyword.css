@@ -1,24 +1,24 @@
 #keyword {
-    height: 30vw;
+    height: 28vw;
     padding: 6vw 0 8vw 20vw;
 }
 
 #keyword .title_keyword h2 {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
     color: var(--main-color-blue);
 }
 
 #keyword .title_keyword h3 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: var(--black300);
 }
 
 #keyword .text_box {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: var(--mainKor-font);
     font-weight: 100;
     padding-top: .5rem;
-    color: var(--black400);
+    color: var(--black200);
 }
 
 #keyword .title_keyword h2{
@@ -58,12 +58,12 @@
     width: 0;
 }
 
-#keyword .text_box .text{
+#keyword .text_box .text, #keyword .text_box .text2{
     position: relative;
     transition: .4s;
     display: none;
 }
-#keyword .text_box .text.active{
+#keyword .text_box .text.active, #keyword .text_box .text2.active{
     display: inline-block;
 }
 
