@@ -83,6 +83,7 @@
   box-sizing: border-box;
   padding: 3vw 0;
   margin: 5vw 0;
+  width: 100%;
 }
 
 .mySwiper .swiper-slide {
