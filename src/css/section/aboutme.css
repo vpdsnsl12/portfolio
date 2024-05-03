@@ -1,6 +1,7 @@
 #about_me {
     position: relative;
-    height: 42vw;
+    height: 40vw;
+    margin-top: 5vw;
 }
 
 #about_me h1 {
@@ -13,32 +14,19 @@
 }
 
 #about_me .bg-img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    position: relative;
 }
 
 #about_me .bg-img img {
-    display: none;
+    opacity: 0;
+    transition: .35s;
+    position: absolute;
+    top: 0;
 }
 
 #about_me .bg-img img.on {
-    display: block;
-    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    opacity: 1;
 }
-
-@keyframes scale-up-center {
-    0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
 
 #about_me h2 {
     color: var(--main-color-blue);
@@ -82,7 +70,7 @@
     width: 23vw;
     position: absolute;
     left: 10vw;
-    top: 0vw;
+    top: 2vw;
 }
 
 #about_me .text-box-img>div {
@@ -386,9 +374,8 @@
 @media screen and (max-width:768px) {
     .modal-box {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 35%;
+        left: 10%;
         width: 80vw;
         height: 50vw;
         background-color: var(--main-color-blue);

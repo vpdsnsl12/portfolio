@@ -20,7 +20,7 @@ position: relative;
     position: absolute;
     font-family: var(--introKor-font);
     font-size: 5vw;
-    z-index: 0;
+    z-index: 1;
 }
 .typing-animation {
     animation-delay: 1s;
@@ -39,13 +39,31 @@ position: relative;
 #intro .intro_title h1:nth-child(3) {
     top: 50%;
     left: 60%;
-
 }
-
-
+#intro .intro_title_bg_box div img{
+    width: 15vw;
+    height: 8vw;
+    z-index: 2;
+    position: absolute;
+}
+#intro .intro_title_bg_box div:nth-child(1) img{
+    top: 30%;
+    left: 35%;
+}
+#intro .intro_title_bg_box div:nth-child(2) img{
+    top: 50%;
+    left: 33%;
+    width: 8vw;
+}
+#intro .intro_title_bg_box div:nth-child(3) img{
+    top: 50%;
+    left: 60%;
+    width: 16vw;
+}
 #intro .lego_font img {
     position: absolute;
     top: 80%;
+    z-index: 5;
 }
 
 #intro .lego_font img:nth-child(1) {
@@ -57,7 +75,7 @@ position: relative;
     top: 50%;
     left: 44%;
     width: 5.208%;
-    z-index: 1;
+    z-index: 6;
 }
 
 #intro .lego_font img:nth-child(3) {

@@ -1,6 +1,6 @@
 export function intro() {
     const duration = 1.5; 
-    const titles = document.querySelectorAll('.intro_title h1');
+    const titles = document.querySelectorAll('.intro_title_bg_box div img');
     const initialPositions = [
         { top: '49%', left: '57%' },
         { top: '50%', left: '44%' },
@@ -58,9 +58,9 @@ export function intro() {
         );
     }
     gsap.timeline({ delay: duration })
-    .fromTo(titles[0], { opacity: 0 }, { opacity: 1, duration: .5 })
-    .fromTo(titles[1], { opacity: 0 }, { opacity: 1, duration: .5 })
-    .fromTo(titles[2], { opacity: 0 }, { opacity: 1, duration: .5 });
+    .fromTo(titles[0], {  x: "0%" }, {  x: "100%", duration: 0.5 })
+    .fromTo(titles[1], {  x: "0%" }, { x: "100%", duration: 0.5 })
+    .fromTo(titles[2], {  x: "0%" }, {  x: "100%", duration: 0.5 });
 }
 
 // export function intro() {

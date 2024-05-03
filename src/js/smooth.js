@@ -1,1 +1,3 @@
-export function smooth(){}
+export function smooth() {
+
+}

@@ -1,0 +1,54 @@
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+
+header nav ul {
+    justify-content: end;
+}
+
+header nav ul li {
+    margin: 2vw 3vw 0 0;
+    color: var(--black100);
+}
+header nav ul li:hover{
+    transition: .35s;
+}
+header nav ul li:nth-child(1):hover {
+    color: red;
+}
+header nav ul li:nth-child(2):hover {
+    color: rgb(25, 128, 224);
+}
+
+header nav ul li:nth-child(3):hover {
+    color: rgb(255, 187, 0);
+}
+
+header nav ul li:nth-child(4):hover {
+    color: rgb(2, 197, 22);
+}
+header nav ul li a{
+    position: relative;
+}
+header nav ul li:hover a::after{
+    content: '';
+    width: .5vw;
+    height: .5vw;
+    border-radius: 99px;
+    position: absolute;
+    left: 50%;
+    top: -1vw;
+    z-index: 1;
+}
+header nav ul li:nth-child(1):hover a::after{
+    background-color:red;
+}header nav ul li:nth-child(2):hover a::after{
+    background-color: rgb(25, 128, 224);
+}header nav ul li:nth-child(3):hover a::after{
+    background-color:rgb(255, 187, 0);
+}
+header nav ul li:nth-child(4):hover a::after{
+    background-color:rgb(2, 197, 22);
+}

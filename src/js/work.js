@@ -5,7 +5,7 @@ export function work() {
         freeMode: true,
         watchSlidesProgress: true,
         centeredSlides: true,
-        loop:true,
+        loop: true,
     });
 
     const swiper2 = new Swiper(".mySwiper2", {
@@ -32,6 +32,7 @@ export function work() {
 
         texts[activeIndex].classList.add('on');
     });
+
 }
 
 work();
