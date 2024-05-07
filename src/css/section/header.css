@@ -24,19 +24,27 @@ header nav ul li:hover {
     transition: .35s;
 }
 
-header nav ul li:nth-child(1):hover {
+header nav ul li:nth-child(1):hover,
+header nav ul li:nth-child(1) a.on
+ {
     color: red;
 }
 
-header nav ul li:nth-child(2):hover {
+header nav ul li:nth-child(2):hover,
+header nav ul li:nth-child(2) a.on
+ {
     color: rgb(25, 128, 224);
 }
 
-header nav ul li:nth-child(3):hover {
+header nav ul li:nth-child(3):hover,
+header nav ul li:nth-child(3) a.on
+ {
     color: rgb(255, 187, 0);
 }
 
-header nav ul li:nth-child(4):hover {
+header nav ul li:nth-child(4):hover,
+header nav ul li:nth-child(4) a.on
+ {
     color: rgb(2, 197, 22);
 }
 

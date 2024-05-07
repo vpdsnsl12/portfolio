@@ -1,13 +1,22 @@
 export function header() {
+  let activeLink = null;
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+
+      if (activeLink) {
+        activeLink.classList.remove('on');
+      }
+      this.classList.add('on');
+      activeLink = this;
 
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
     });
   });
+  
   let isScrollingUp = false;
   let lastScrollTop = 0;
 
@@ -15,10 +24,8 @@ export function header() {
     let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop){
-      // Scroll down
       isScrollingUp = false;
     } else {
-      // Scroll up
       isScrollingUp = true;
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
@@ -26,10 +33,8 @@ export function header() {
 
   window.addEventListener("wheel", function(event) {
     if (event.deltaY > 0 && !isScrollingUp) {
-      // Scroll down
       document.getElementById("header").classList.add("hidden");
     }  else {
-      // Scroll up
       document.getElementById("header").classList.remove("hidden");
     }
   });
