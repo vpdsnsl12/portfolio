@@ -11,20 +11,22 @@
   <style>
     #work .swiper-pagination-fraction {
       width: 5vw;
-    left: 2.5vw;
-    bottom: -1vw;
-    font-size: 1vw;
-    color: var(--black200);
+      left: 10.5vw;
+      top: 32vw;
+      font-size: 1vw;
+      color: var(--black200);
     }
   </style>
 </head>
 
 <body>
-  <header id="header">
+  <header id="header" >
     <nav>
       <ul class="flex">
-        <li><a href="">MAIN</a></li>
-        <li><a class="click-modal" href="#">contact</a></li>
+        <li><a href="#intro">Main</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#about_me">About_me</a></li>
       </ul>
     </nav>
   </header>
@@ -76,14 +78,14 @@
         <div><img src="./src/img/bgcolor.png" alt=""></div>
       </div>
     </div>
-  </section>
-  <section id="keyword" class="keyword">
-    <div class="title_keyword">
-      <h2>Infinite</h2>
-      <h3>무한한 잠재력</h3>
-    </div>
-    <div class="text_box">
-      <span class="text"></span><span class="blink">|</span>
+    <div id="keyword" class="keyword">
+      <div class="title_keyword">
+        <h2>Infinite</h2>
+        <h3>무한한 잠재력</h3>
+      </div>
+      <div class="text_box">
+        <span class="text"></span><span class="blink">|</span>
+      </div>
     </div>
   </section>
   <section id="work">
@@ -405,98 +407,100 @@
         </div>
       </div>
     </div>
-  </section>
-  <section id="keyword" class="keyword">
-    <div class="title_keyword">
-      <h2>Concentration</h2>
-      <h3>멈추지않고 달리다</h3>
-    </div>
-    <div class="text_box">
-      <span class="text2"></span><span class="blink">|</span>
+    <div id="keyword" class="keyword">
+      <div class="title_keyword">
+        <h2>Concentration</h2>
+        <h3>멈추지않고 달리다</h3>
+      </div>
+      <div class="text_box">
+        <span class="text2"></span><span class="blink">|</span>
+      </div>
     </div>
   </section>
   <section id="project">
-    <div class="project-wrap1">
-      <div class="text-box on">
-        <p>WEB</p>
-        <h2>여기어때 리뉴얼</h2>
-      </div>
-      <div class="text-box">
-        <p>APP</p>
-        <h2>GET GOAL</h2>
-      </div>
-      <div class="text-box">
-        <p>WEB</p>
-        <h2>청와대</h2>
-      </div>
-      <div class="swiper mySwiper3">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./src/img/box.png" />
-            <div class="text">
-              <h3>더 직관적이고 <br> 취향저격적인1</h3>
-              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
-                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
-                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
-                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
-              <span><a href="">피그마 작업물 보기</a></span>
-              <img src="./src/img/project-img.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/box.png" />
-            <div class="text">
-              <h3>더 직관적이고 <br> 취향저격적인2</h3>
-              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
-                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
-                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
-                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
-              <span><a href="">피그마 작업물 보기</a></span>
-              <img src="./src/img/project-img3.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/box.png" />
-            <div class="text">
-              <h3>더 직관적이고 <br> 취향저격적인3</h3>
-              <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
-                30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
-                여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
-                고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
-              <span><a href="">피그마 작업물 보기</a></span>
-              <img src="./src/img/project-img2.png" alt="">
-            </div>
-          </div>
+    <div class="project-wrap-all">
+      <div class="project-wrap1">
+        <div class="text-box on">
+          <p>WEB</p>
+          <h2>여기어때 리뉴얼</h2>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="text-box">
+          <p>APP</p>
+          <h2>GET GOAL</h2>
+        </div>
+        <div class="text-box">
+          <p>WEB</p>
+          <h2>청와대</h2>
+        </div>
+        <div class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/img/box.png" />
+              <div class="text">
+                <h3>더 직관적이고 <br> 취향저격적인1</h3>
+                <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+                <span><a href="">피그마 작업물 보기</a></span>
+                <img src="./src/img/project-img.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/box.png" />
+              <div class="text">
+                <h3>더 직관적이고 <br> 취향저격적인2</h3>
+                <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+                <span><a href="">피그마 작업물 보기</a></span>
+                <img src="./src/img/project-img3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/box.png" />
+              <div class="text">
+                <h3>더 직관적이고 <br> 취향저격적인3</h3>
+                <p>'취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br>
+                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도 <br>
+                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br>
+                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을 수립하였습니다. '</p>
+                <span><a href="">피그마 작업물 보기</a></span>
+                <img src="./src/img/project-img2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="project-wrap2">
+        <h1><img src="./src/img/project.png" alt=""></h1>
+        <h3>프로세스 살펴보기</h3>
+        <div class="box">
+          <p><a href="">리뉴얼 이전페이지</a></p>
+          <p><a href="">리뉴얼 이후페이지</a></p>
+        </div>
       </div>
     </div>
-    <div class="project-wrap2">
-      <h1><img src="./src/img/project.png" alt=""></h1>
-      <h3>프로세스 살펴보기</h3>
-      <div class="box">
-        <p><a href="">리뉴얼 이전페이지</a></p>
-        <p><a href="">리뉴얼 이후페이지</a></p>
+    <div id="keyword" class="keyword keyword3">
+      <div class="title_keyword">
+        <h2>Flexibility</h2>
+        <h3>조립과 해체</h3>
+      </div>
+      <div class="text_box">
+        <span class="text3"></span><span class="blink">|</span>
       </div>
     </div>
-  </section>
-  <section id="keyword" class="keyword">
-    <div class="title_keyword">
-      <h2>Flexibility</h2>
-      <h3>조립과 해체</h3>
-    </div>
-    <div class="text_box">
-      <span class="text3"></span><span class="blink">|</span>
-    </div>
-  </section>
-  <section id="keyword" class="keyword keyword4">
-    <div class="title_keyword">
-      <h2>Communication</h2>
-      <h3>협엽과 소통</h3>
-    </div>
-    <div class="text_box">
-      <span class="text4"></span><span class="blink">|</span>
+    <div id="keyword" class="keyword keyword4">
+      <div class="title_keyword">
+        <h2>Communication</h2>
+        <h3>협엽과 소통</h3>
+      </div>
+      <div class="text_box">
+        <span class="text4"></span><span class="blink">|</span>
+      </div>
     </div>
   </section>
   <section id="about_me">
@@ -570,7 +574,8 @@
               총 조회수 : 3,691회</p>
           </div>
           <img class="computer" src="./src/img/computer.png" alt="">
-        </div></div>
+        </div>
+      </div>
       <div><img src="./src/img/text-box.png" alt="">
         <div class="text skill-box">
           <h3>SKILL</h3>
@@ -596,7 +601,7 @@
       </div>
       <div><img src="./src/img/text-box.png" alt="">
         <div class="text click">
-          <h3><a class="click-modal" href="">CLICK</a></h3>
+          <h3><a class="click-modal" href="#">CLICK</a></h3>
         </div>
       </div>
     </div>
@@ -632,5 +637,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
 </html>

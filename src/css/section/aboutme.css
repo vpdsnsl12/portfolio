@@ -153,6 +153,10 @@
     text-align: center;
 }
 
+.skill-box ul {
+    margin-left: 2vw;
+    margin-bottom: .5vw;
+}
 .skill-box li {
     width: 3.2vw;
     margin: .2vw;
@@ -168,17 +172,11 @@
     margin-left: .3vw;
 }
 
-.skill-box ul {
-    margin-left: 2vw;
-    margin-bottom: .5vw;
-}
-
 .skill-box span {
-    margin: 2vw 1vw;
     color: var(--black200);
     font-size: .8vw;
     font-family: var(--mainKor-font);
-    line-height: 1.5vw;
+    line-height: 1vw;
 }
 
 .click h3 {

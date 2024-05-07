@@ -61,29 +61,5 @@ export function intro() {
     .fromTo(titles[0], {  x: "0%" }, {  x: "100%", duration: 0.5 })
     .fromTo(titles[1], {  x: "0%" }, { x: "100%", duration: 0.5 })
     .fromTo(titles[2], {  x: "0%" }, {  x: "100%", duration: 0.5 });
+
 }
-
-// export function intro() {
-//     const duration = 2;
-//     const titles = document.querySelectorAll('.intro_title h1');
-//     const imgs = document.querySelectorAll('.lego_font img');
-
-
-//     imgs.forEach((img, index) => {
-//         const finalPosition = {
-//             top: initialPositions[index].top,
-//             left: initialPositions[index].left,
-//             autoAlpha: 1,
-//         };
-
-//         gsap.fromTo(img,
-//             { autoAlpha: 0 }, 
-//             { ...finalPosition, duration: duration, autoAlpha: 1 }
-//         );
-//     });
-
-//     gsap.timeline({ delay: duration })
-//         .fromTo(titles[0], { opacity: 0 }, { opacity: 1, duration: .5 })
-//         .fromTo(titles[1], { opacity: 0 }, { opacity: 1, duration: .5 })
-//         .fromTo(titles[2], { opacity: 0 }, { opacity: 1, duration: .5 });
-// }

@@ -1,11 +1,12 @@
 #project {
   position: relative;
-  height: 50vw;
+  height: 110vw;
   padding: 5vw 13vw;
-  display: flex;
   margin-top: 10vw;
 }
-
+.project-wrap-all{
+  display: flex;
+}
 .project-wrap1 {
   flex: 1;
 }
@@ -55,7 +56,6 @@
   height: 24vw;
   position: absolute;
   left: 13%;
-  top: 33%;
 }
 
 #project .swiper-slide {

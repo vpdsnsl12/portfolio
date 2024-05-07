@@ -112,15 +112,6 @@
   top: 13vw;
   cursor: pointer;
 }
-.swiper-button-next::after{
-  content: '>';
-  color: white;
-  font-size: 3vw;
-  line-height: 6vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .swiper-button-next:hover, 
 .swiper-button-prev:hover{
   background-color: rgba(0, 0, 0, 0.249);
@@ -128,15 +119,8 @@
 .swiper-button-prev{
   left: 0;
 }
-.swiper-button-prev::after{
-  content: '<';
+.swiper-button-next:after, .swiper-button-prev:after {
   color: white;
-  font-size: 3vw;
-  display: flex;
-  align-items: center;
-  line-height: 6vw;
-  justify-content: center;
-  left: 0;
 }
 .swiper-pagination-current{
   color: var(--main-color-yellow);
