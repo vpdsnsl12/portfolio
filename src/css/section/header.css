@@ -5,6 +5,7 @@ header {
     top: 0;
     left: 0;
     transition: 0.3s;
+    /* background-color: var(--background-color); */
 }
 
 header.hidden {
@@ -78,7 +79,11 @@ header nav ul li:nth-child(3):hover a::after {
 header nav ul li:nth-child(4):hover a::after {
     background-color: rgb(2, 197, 22);
 }
-
+h5{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 @media screen and (max-width:768px) {
     header nav ul li {
         font-size: 2vw;
