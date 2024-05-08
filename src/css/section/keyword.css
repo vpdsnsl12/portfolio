@@ -3,11 +3,6 @@
     padding: 6vw 0 8vw 20vw;
 }
 
-#keyword .title_keyword h2 {
-    font-size: 4.5vw;
-    color: var(--main-color-blue);
-}
-
 #keyword .title_keyword h3 {
     font-size: 1.5vw;
     color: var(--black300);
@@ -24,6 +19,8 @@
 #keyword .title_keyword h2{
     position: relative;
     display: inline-block;
+        font-size: 4.5vw;
+    color: var(--main-color-blue);
 }
 
 .title_keyword h2::before {
@@ -72,9 +69,13 @@
         opacity: 0;
     }
 }
+.keyword2{
+margin-left: -19vw;
+}
 .keyword3{
-    margin-left: -20vw;
+margin-left: -8vw;
 }
 .keyword4{
 text-align: right;
+margin-right: 8vw;
 }

@@ -39,10 +39,26 @@ export function intro() {
 
     for (let i = 0; i < initialPositions.length; i++) {
         const img = document.querySelector('.lego_font img:nth-child(' + (i + 1) + ')');
+        const imgRect = img.getBoundingClientRect(); // Get the bounding rectangle of the image
 
-        const randomTop = Math.random() * (window.innerHeight - img.offsetHeight);
-        const randomLeft = Math.random() * (window.innerWidth - img.offsetWidth);
+        // Calculate random top and left positions along the edges of the viewport
+        let randomTop, randomLeft;
 
+        // Randomly choose whether to position the image along the top/bottom or left/right edge
+        const randomEdge = Math.random() < 0.5 ? 'topBottom' : 'leftRight';
+
+        if (randomEdge === 'topBottom') {
+            randomTop = Math.random() < 0.5 ? 0 : window.innerHeight - imgRect.height;
+            randomLeft = (Math.random() * 0.8 + 0.1) * (window.innerWidth - imgRect.width); // Adjusted to be slightly more towards the center
+        } else {
+            randomTop = (Math.random() * 0.8 + 0.1) * (window.innerHeight - imgRect.height); // Adjusted to be slightly more towards the center
+            randomLeft = Math.random() < 0.5 ? 0 : window.innerWidth - imgRect.width;
+        }
+
+        // Adjust left position by -3vw
+        randomLeft -= 10 * window.innerWidth / 100;
+
+        // Set the image position
         img.style.top = randomTop + 'px';
         img.style.left = randomLeft + 'px';
 
@@ -50,6 +66,7 @@ export function intro() {
             top: initialPositions[i].top,
             left: initialPositions[i].left,
             autoAlpha: 1,
+            delay: 1,
         };
 
         gsap.fromTo(img,
@@ -57,9 +74,9 @@ export function intro() {
             { ...finalPosition, duration: duration }
         );
     }
-    gsap.timeline({ delay: duration })
-    .fromTo(titles[0], {  x: "0%" }, {  x: "100%", duration: 0.5 })
-    .fromTo(titles[1], {  x: "0%" }, { x: "100%", duration: 0.5 })
-    .fromTo(titles[2], {  x: "0%" }, {  x: "100%", duration: 0.5 });
 
+    gsap.timeline({ delay: duration })
+        .fromTo(titles[0], {  x: "0%" }, {  x: "100%", duration: 0.5,  delay: 1.2 })
+        .fromTo(titles[1], {  x: "0%" }, { x: "100%", duration: 0.5 ,  })
+        .fromTo(titles[2], {  x: "0%" }, {  x: "100%", duration: 0.5 ,  });
 }

@@ -1,10 +1,11 @@
 #project {
   position: relative;
-  height: 110vw;
+  height: 90vw;
   padding: 5vw 13vw;
   margin-top: 10vw;
 }
 .project-wrap-all{
+  margin-top: 10vw;
   display: flex;
 }
 .project-wrap1 {
