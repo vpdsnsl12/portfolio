@@ -14,7 +14,7 @@ export function aboutme() {
         });
         textBoxes[activeIndex].classList.add('on');
 
-        if (activeIndex === 0 || activeIndex === 1) {
+        if (activeIndex === 4 || activeIndex === 5) {
             const japanImage = document.querySelector('.bg-img img.on');
             if (!japanImage) return;
             japanImage.classList.remove('on');

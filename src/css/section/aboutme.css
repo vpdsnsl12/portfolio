@@ -291,9 +291,13 @@
 .modal-box .contact h3 {
     font-size: 3vw;
 }
+.modal-box .contact h3:nth-child(1){
+    font-size: .9vw;
+}
 
 .modal-box .contact ul {
-    margin-top: 3vw;
+    margin-top: 1.5vw;
+    margin-left: -1vw;
 }
 
 .modal-box .contact ul li {
