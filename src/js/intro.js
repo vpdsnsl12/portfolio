@@ -1,5 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('hashchange', function () {
+        // 현재 해시 값이 #intro인 경우에만 intro 함수 호출
+        if (window.location.hash === '#intro') {
+            intro();
+        }
+    });
+});
 export function intro() {
-    const duration = 1.5; 
+    const duration = 1.5;
     const titles = document.querySelectorAll('.intro_title_bg_box div img');
     const initialPositions = [
         { top: '49%', left: '57%' },
@@ -55,7 +63,7 @@ export function intro() {
             randomLeft = Math.random() < 0.5 ? 0 : window.innerWidth - imgRect.width;
         }
 
-        // Adjust left position by -3vw
+        // Adjust left position by -0.5vw
         randomLeft -= 10 * window.innerWidth / 100;
 
         // Set the image position
@@ -76,7 +84,14 @@ export function intro() {
     }
 
     gsap.timeline({ delay: duration })
-        .fromTo(titles[0], {  x: "0%" }, {  x: "100%", duration: 0.5,  delay: 1.2 })
-        .fromTo(titles[1], {  x: "0%" }, { x: "100%", duration: 0.5 ,  })
-        .fromTo(titles[2], {  x: "0%" }, {  x: "100%", duration: 0.5 ,  });
+        .fromTo(titles[0], { x: "0%" }, { x: "100%", duration: 0.5, delay: 1.2 })
+        .fromTo(titles[1], { x: "0%" }, { x: "100%", duration: 0.5, })
+        .fromTo(titles[2], { x: "0%" }, { x: "100%", duration: 0.5, });
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainLink = document.querySelector('a[href="#intro"]');
+            mainLink.addEventListener('click', function(event) {
+                event.preventDefault(); // 기본 이벤트 동작 방지
+                window.location.reload(); // 페이지 새로고침
+            });
+        });
 }

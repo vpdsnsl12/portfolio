@@ -1,12 +1,10 @@
 #work{
   position: relative;
-  padding-top: 5vw;
-  margin-bottom: 8vw;
   height: 90vw;
 }
 .work-wrap-all{
   position: relative;
-  margin-top: 10vw;
+  padding-top: 5vw;
 }
 #work .text-box{
   width: 30vw;

@@ -12,6 +12,10 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "gsap": "^3.12.5"
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^5.0.36",
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.12.5",
+    "lenis": "^1.0.45"
   }
 }

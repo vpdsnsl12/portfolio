@@ -7,9 +7,7 @@ import { project } from "./project.js";
 import { keyword3 } from "./keyword3.js";
 import { aboutme } from "./aboutme.js";
 import { keyword4 } from "./keyword4.js";
-import { smooth } from "./smooth.js";
-
-
+// import { smooth } from "./smooth.js";
 
 window.addEventListener('load',function(){
   header()
@@ -21,5 +19,5 @@ window.addEventListener('load',function(){
   keyword3()
   aboutme()
   keyword4()
-  smooth()
+  // smooth()
 })

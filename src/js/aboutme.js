@@ -1,3 +1,4 @@
+// import { Fancybox } from "@fancyapps/fancybox";
 export function aboutme() {
     const swiper = new Swiper(".mySwiper5", {
         slidesPerView: 1,
@@ -30,19 +31,39 @@ export function aboutme() {
             koreaImage.classList.add('on');
         }
     });
-    document.querySelectorAll('.click-modal').forEach(function(element) {
-        element.addEventListener('click', function(event) {
+    document.querySelectorAll('.click-modal').forEach(function (element) {
+        element.addEventListener('click', function (event) {
             event.preventDefault();
-            document.querySelectorAll('.modal').forEach(function(modal) {
+            document.querySelectorAll('.modal').forEach(function (modal) {
                 modal.classList.add('on');
             });
         });
     });
-    
-    document.querySelector('.close').addEventListener('click', function(event) {
+
+    document.querySelector('.close').addEventListener('click', function (event) {
         event.preventDefault();
-        document.querySelectorAll('.modal').forEach(function(modal) {
+        document.querySelectorAll('.modal').forEach(function (modal) {
             modal.classList.remove('on');
+        });
+    });
+
+    Fancybox.defaults.Image = {
+        width: '30vw' // 이미지 가로 크기를 30vw로 설정
+    };
+
+    Fancybox.bind("[data-fancybox]", {
+        Click: "close" // 모달 바깥을 클릭하면 모달을 닫는 동작 추가
+    });
+    console.log("gdf")
+
+    const images = document.querySelectorAll('.your-image-selector');
+    images.forEach(function (image) {
+        image.addEventListener('click', function (event) {
+            event.preventDefault();
+            Fancybox.show([{
+                src: image.href,
+                type: "image"
+            }]);
         });
     });
 }

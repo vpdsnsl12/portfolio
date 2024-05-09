@@ -23,7 +23,7 @@ export function keyword4() {
       scrub: 1,
       onToggle: (self) => {
         if(self.isActive) {
-            setInterval(typing4, 500);
+            setInterval(typing4, 900);
         }
       },
     },

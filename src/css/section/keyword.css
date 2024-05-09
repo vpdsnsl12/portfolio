@@ -1,6 +1,8 @@
 #keyword {
-    height: 28vw;
+    height: 35vw;
     padding: 6vw 0 8vw 20vw;
+    position: relative;
+    left: -8vw;
 }
 
 #keyword .title_keyword h3 {
@@ -16,10 +18,10 @@
     color: var(--black200);
 }
 
-#keyword .title_keyword h2{
+#keyword .title_keyword h2 {
     position: relative;
     display: inline-block;
-        font-size: 4.5vw;
+    font-size: 4.5vw;
     color: var(--main-color-blue);
 }
 
@@ -51,16 +53,20 @@
 #keyword .title_keyword h2.active::before {
     width: 0;
 }
+
 #keyword .title_keyword h2.active::after {
     width: 0;
 }
 
-#keyword .text_box .text, #keyword .text_box .text2{
+#keyword .text_box .text,
+#keyword .text_box .text2 {
     position: relative;
     transition: .4s;
     display: none;
 }
-#keyword .text_box .text.active, #keyword .text_box .text2.active{
+
+#keyword .text_box .text.active,
+#keyword .text_box .text2.active {
     display: inline-block;
 }
 
@@ -69,13 +75,19 @@
         opacity: 0;
     }
 }
-.keyword2{
-margin-left: -19vw;
+#keyword.keyword2{
+    padding-top: 8vw;
 }
-.keyword3{
-margin-left: -8vw;
+#keyword.keyword3 {
+margin-top:4vw;
+margin-left: -12vw;
+height: 20vw;
 }
-.keyword4{
-text-align: right;
-margin-right: 8vw;
+
+
+#keyword.keyword4 {
+    text-align: right;
+    margin-right: -4vw;
+    margin-top: 8vw;
+    height: 21vw;
 }

@@ -20,7 +20,7 @@ export function keyword() {
     gsap.to(item, {
       scrollTrigger: {
         trigger: item,
-        start: "top 70%",
+        start: "top 80%",
         toggleClass: { targets: item, className: "active" },
         scrub: 1,
       },
@@ -29,7 +29,7 @@ export function keyword() {
   gsap.to(item2, {
     scrollTrigger: {
       trigger: item2,
-      start: "top 80%",
+      start: "top 70%",
       toggleClass: { targets: item2, className: "active" },
       scrub: 1,
       onToggle: (self) => {

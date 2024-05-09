@@ -1,4 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+
 export function work() {
+
     const swiper = new Swiper(".mySwiper", {
         spaceBetween: 15,
         slidesPerView: 10,
@@ -32,7 +35,6 @@ export function work() {
 
         texts[activeIndex].classList.add('on');
     });
-
 }
 
 work();
