@@ -17,7 +17,7 @@ window.addEventListener('load',function(){
   keyword2()
   project()
   keyword3()
-  aboutme()
   keyword4()
+  aboutme()
   // smooth()
 })

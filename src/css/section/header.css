@@ -24,7 +24,9 @@ header nav ul li {
 header nav ul li:hover {
     transition: .35s;
 }
-
+header nav ul li a.on{
+    border-bottom: .15vw dashed;
+}
 header nav ul li:nth-child(1):hover,
 header nav ul li:nth-child(1) a.on
  {
