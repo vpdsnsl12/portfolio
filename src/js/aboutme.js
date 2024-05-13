@@ -1,4 +1,3 @@
-// import { Fancybox } from "@fancyapps/fancybox";
 export function aboutme() {
     const swiper = new Swiper(".mySwiper5", {
         slidesPerView: 1,
@@ -46,25 +45,23 @@ export function aboutme() {
             modal.classList.remove('on');
         });
     });
+    
+    const clickSkill = document.querySelector('.click-skill');
+    const skillList = document.querySelector('.skill-list');
+    const skillClose = document.querySelector('.skill-close');
+    const legoGroup = document.querySelector('.lego-group');
+    
+    clickSkill.addEventListener('click', function() {
+        skillList.classList.add('on');
+        legoGroup.classList.add('on');
 
-    Fancybox.defaults.Image = {
-        width: '30vw' // 이미지 가로 크기를 30vw로 설정
-    };
-
-    Fancybox.bind("[data-fancybox]", {
-        Click: "close" // 모달 바깥을 클릭하면 모달을 닫는 동작 추가
     });
-    console.log("gdf")
+    
+    skillClose.addEventListener('click', function(event) {
+        event.preventDefault(); // 기본 동작 차단
+        skillList.classList.remove('on');
+        legoGroup.classList.remove('on');
 
-    const images = document.querySelectorAll('.your-image-selector');
-    images.forEach(function (image) {
-        image.addEventListener('click', function (event) {
-            event.preventDefault();
-            Fancybox.show([{
-                src: image.href,
-                type: "image"
-            }]);
-        });
     });
 }
 

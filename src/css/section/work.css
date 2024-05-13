@@ -85,18 +85,25 @@
   height: 12vw;
   box-sizing: border-box;
   padding: 3vw 0;
-  margin: 5vw 0;
+  margin: 3.5vw 0;
   width: 100%;
 }
-
+.mySwiper .swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
 .mySwiper .swiper-slide {
-  height: 80%;
-  opacity: 0.4;
+  height: 60%;
+  opacity: 0.5;
+  filter: blur(.7px);
   border-radius: 99px;
+  transition: .35s;
 }
 
 .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
+  filter: blur(0px);
+  height: 80%;
 }
 
 .swiper-slide img {

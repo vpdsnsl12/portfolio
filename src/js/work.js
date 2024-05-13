@@ -1,39 +1,44 @@
 gsap.registerPlugin(ScrollTrigger);
 
 export function work() {
-  const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 15,
-    slidesPerView: 10,
-    freeMode: true,
-    watchSlidesProgress: true,
-    // centeredSlides: true,
-    loop: true,
-  });
-
-  const swiper2 = new Swiper(".mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-  });
-  swiper2.on("slideChange", function () {
-    let activeIndex = swiper2.activeIndex;
-
-    let texts = document.querySelectorAll("#work .text-box .text");
-    texts.forEach(function (text) {
-      text.classList.remove("on");
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 9.5,
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
 
-    texts[activeIndex].classList.add("on");
+    const swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    });
+
+    swiper2.on("slideChange", function () {
+      let activeIndex = swiper2.realIndex; // swiper2의 실제 인덱스를 가져옵니다.
+
+      let texts = document.querySelectorAll("#work .text-box .text");
+      texts.forEach(function (text) {
+        text.classList.remove("on");
+      });
+
+      texts[activeIndex].classList.add("on");
+    });
   });
 }
 

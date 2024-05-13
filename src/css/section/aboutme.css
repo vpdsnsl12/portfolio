@@ -2,7 +2,8 @@
     position: relative;
     height: 46.8vw;
 }
-.about-wrap{
+
+.about-wrap {
     position: relative;
 }
 
@@ -48,7 +49,6 @@
     font-size: 1vw;
     line-height: 2vw;
 }
-
 #about_me .swiper {
     width: 40vw;
     height: 15vw;
@@ -152,14 +152,18 @@
 .skill-box {
     width: 25vw;
     margin-left: -3.8vw;
-    margin-top: .5vw;
     text-align: center;
+}
+
+.skill-box div {
+    margin-top: 1.5vw;
 }
 
 .skill-box ul {
     margin-left: 2vw;
     margin-bottom: .5vw;
 }
+
 .skill-box li {
     width: 3.2vw;
     margin: .2vw;
@@ -182,6 +186,17 @@
     line-height: 1vw;
 }
 
+.skill-box .click-skill a {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 13vw;
+}
+
+.skill-box .click-skill a:hover {
+    color: black;
+}
+
 .click h3 {
     position: absolute;
     width: 15vw;
@@ -194,6 +209,10 @@
 .click h3 a {
     font-size: 3vw;
     animation: text-shadow-pop-top 0.6s both;
+}
+
+.mySwiper5 {
+    cursor: pointer;
 }
 
 @keyframes text-shadow-pop-top {
@@ -209,6 +228,7 @@
         transform: translateY(8px);
     }
 }
+
 /* arrow */
 .arrow {
     position: absolute;
@@ -268,8 +288,50 @@
     z-index: 11;
     padding: 5vw 7vw;
     border-radius: 3vw;
-    position: relative;
     animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.modal-box::after {
+    content: '';
+    background-image: url(../../img/ready.png);
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -3.5vw;
+    right: -1.5vw;
+    width: 10vw;
+    height: 3vw;
+    animation: wobble-hor-bottom 1s 3s both;
+}
+
+@keyframes wobble-hor-bottom {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
 }
 
 @keyframes scale-in-center {
@@ -289,7 +351,8 @@
 .modal-box .contact h3 {
     font-size: 3vw;
 }
-.modal-box .contact h3:nth-child(1){
+
+.modal-box .contact h3:nth-child(1) {
     font-size: .9vw;
 }
 
@@ -433,4 +496,116 @@
         color: var(--main-color-blue);
         background-color: var(--white);
     }
+}
+
+.skill-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.89);
+    z-index: 99;
+}
+
+.skill-list .lego-group {
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.lego-group.on {
+    display: block;
+    animation: bounce-in-top 1.3s both;
+}
+
+@keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-800px);
+        transform: translateY(-800px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-100px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: translateY(-40px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
+
+.skill-list.on {
+    display: block;
+}
+
+.skill-list.on .skill-img {
+    left: 25%;
+    bottom: 20%;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.skill-list.on .skill-img img {
+    border-radius: 1vw;
+    border: 3px dashed var(--black300);
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.skill-list .skill-img {
+    position: absolute;
+    width: 45vw;
+    left: 30%;
+    top: 10%;
+    z-index: 99;
+}
+
+.skill-list .skill-img a {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    font-size: 1vw;
 }
