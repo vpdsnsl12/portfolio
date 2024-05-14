@@ -1,23 +1,25 @@
 header {
     position: fixed;
     width: 100vw;
+    height: 5vw;
     z-index: 10;
     top: 0;
     left: 0;
     transition: 0.3s;
+    align-items: center;
+    justify-content: space-between;
     /* background-color: var(--background-color); */
 }
-
+header h1{
+    width: 2vw;
+    margin-left: 2vw;
+}
 header.hidden {
     margin-top:-100px;
 }
 
-header nav ul {
-    justify-content: end;
-}
-
 header nav ul li {
-    margin: 2vw 3vw 0 0;
+    margin: 0 3vw 0 0;
     color: var(--black100);
 }
 
@@ -88,7 +90,20 @@ h5{
 }
 
 @media screen and (max-width:768px) {
+    header{
+        height: 13vw;
+    }
+    header h1{
+        width: 5vw;
+    }
     header nav ul li {
         font-size: 2vw;
+    }
+    header nav ul{
+        flex-direction: column;
+        align-items: end;
+    }
+    header.hidden {
+        margin-top:-200px;
     }
 }

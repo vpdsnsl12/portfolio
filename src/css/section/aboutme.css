@@ -49,6 +49,7 @@
     font-size: 1vw;
     line-height: 2vw;
 }
+
 #about_me .swiper {
     width: 40vw;
     height: 15vw;
@@ -434,70 +435,6 @@
     color: var(--black400);
 }
 
-@media screen and (max-width:768px) {
-    .modal-box {
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        width: 80vw;
-        height: 50vw;
-        background-color: var(--main-color-blue);
-        color: white;
-        z-index: 11;
-        padding: 5vw;
-        border-radius: 3vw;
-    }
-
-    .modal-box .contact h3 {
-        font-size: 5vw;
-    }
-
-    .modal-box .contact ul li {
-        display: flex;
-        align-items: center;
-        font-size: 2vw;
-        margin: 3vw 0;
-    }
-
-    .modal-box .contact ul li img {
-        width: 4vw;
-        height: 4vw;
-        margin: 0 1vw;
-    }
-
-    .modal-box .contact ul li:nth-child(1) img {
-        width: 3.5vw;
-        height: 3.5vw;
-    }
-
-    .up-img {
-        position: absolute;
-        right: 18%;
-        top: 23%;
-        width: 20vw;
-    }
-
-    .up-img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .close {
-        width: 5vw;
-        padding: .7vw .3vw;
-        font-size: 2vw;
-        line-height: 2vw;
-        text-align: center;
-        position: absolute;
-        bottom: 2vw;
-        left: 45%;
-        border-radius: .5vw;
-        color: var(--main-color-blue);
-        background-color: var(--white);
-    }
-}
-
 .skill-list {
     display: none;
     position: absolute;
@@ -608,4 +545,89 @@
     top: 1vw;
     right: 1vw;
     font-size: 1vw;
+}
+
+@media screen and (max-width:768px) {
+    .modal-box {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        width: 80vw;
+        height: 50vw;
+        background-color: var(--main-color-blue);
+        color: white;
+        z-index: 11;
+        padding: 5vw;
+        border-radius: 3vw;
+    }
+
+    .modal-box .contact h3 {
+        font-size: 5vw;
+    }
+
+    .modal-box .contact ul li {
+        display: flex;
+        align-items: center;
+        font-size: 2vw;
+        margin: 3vw 0;
+    }
+
+    .modal-box .contact ul li img {
+        width: 4vw;
+        height: 4vw;
+        margin: 0 1vw;
+    }
+
+    .modal-box .contact ul li:nth-child(1) img {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .up-img {
+        position: absolute;
+        right: 18%;
+        top: 23%;
+        width: 20vw;
+    }
+
+    .up-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .close {
+        width: 5vw;
+        padding: .7vw .3vw;
+        font-size: 2vw;
+        line-height: 2vw;
+        text-align: center;
+        position: absolute;
+        bottom: 2vw;
+        left: 45%;
+        border-radius: .5vw;
+        color: var(--main-color-blue);
+        background-color: var(--white);
+    }
+
+    .modal-box::after {
+        top: -5.5vw;
+        right: -1.5vw;
+        width: 14vw;
+        height: 5vw;
+    }
+
+    .skill-list .skill-img {
+        width: 70vw;
+    }
+    .skill-list.on .skill-img {
+        left: 15%;
+        top: 20%;
+    }
+    .skill-list .skill-img a {
+        position: absolute;
+        top: 1.5vw;
+        right: 1.5vw;
+        font-size: 2vw;
+    }
 }

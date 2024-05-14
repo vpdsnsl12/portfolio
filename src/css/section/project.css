@@ -14,7 +14,7 @@
 
 .project-wrap2 {
   width: 35vw;
-  padding: 7vw 5vw;
+  padding: 7vw 8vw;
 }
 
 .project-wrap2 h1 {
@@ -184,11 +184,11 @@
 }
 
 #project .swiper-button-prev {
-  left: 62vw;
+  left: 65vw;
 }
 
 #project .swiper-button-next {
-  left: 66vw;
+  left: 70vw;
 
 }
 
