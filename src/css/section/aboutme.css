@@ -199,35 +199,41 @@
 }
 
 .click h3 {
-    position: absolute;
-    width: 15vw;
-    height: 15vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1vw;
+    margin-left: 1vw;
 }
 
-.click h3 a {
-    font-size: 3vw;
-    animation: text-shadow-pop-top 0.6s both;
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
 }
 
 .mySwiper5 {
     cursor: pointer;
-}
-
-@keyframes text-shadow-pop-top {
-    0% {
-        text-shadow: 0 0 #ffffff, 0 0 #ffffff, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        text-shadow: 0 -1px #ffffff, 0 -2px #ffffff, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555, 0 -7px #555555, 0 -8px #555555;
-        -webkit-transform: translateY(8px);
-        transform: translateY(8px);
-    }
 }
 
 /* arrow */
@@ -287,7 +293,7 @@
     background-color: var(--main-color-blue);
     color: white;
     z-index: 11;
-    padding: 5vw 7vw;
+    padding: 4vw 7vw;
     border-radius: 3vw;
     animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -358,63 +364,147 @@
 }
 
 .modal-box .contact ul {
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     margin-left: -1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-box .contact p {
+    margin-top: 1vw;
+    line-height: 1.5vw;
+    font-size: 1vw;
+    font-family: var(--mainKor-font);
 }
 
 .modal-box .contact ul li {
     display: flex;
     align-items: center;
-    font-size: 1vw;
-    margin: 1vw 0;
+    font-size: .7vw;
+    margin: .5vw 0 0;
+}
+
+.modal-box .contact p b {
+    position: relative;
+}
+
+.modal-box .contact p b::after {
+    content: '';
+    background-image: url(../../img/grow.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2.5vw;
+    height: 2vw;
+    position: absolute;
+    left: -.2vw;
+    bottom: 1.2vw;
+    animation: jello-horizontal 1.5s infinite both;
+}
+
+@keyframes jello-horizontal {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .modal-box .contact ul li img {
-    width: 2vw;
-    height: 2vw;
+    width: 1.5vw;
+    height: 1.5vw;
     margin: 0 1vw;
 }
 
 .modal-box .contact ul li:nth-child(1) img {
-    width: 1.8vw;
-    height: 1.8vw;
+    width: 1.2vw;
+    height: 1.2vw;
 }
 
 .up-img {
     position: absolute;
-    right: 18%;
-    top: 23%;
-    width: 12vw;
+    left: 5vw;
+    top: 8vw;
+    width: 8vw;
+    z-index: 0;
+    cursor: pointer;
+}
 
+.up-img:hover div:nth-child(2) img {
+    animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .up-img img {
     position: absolute;
     top: 0;
     left: 0;
+    width: 8vw;
+
+}
+
+.up-img div:nth-child(1) img {
+    top: 4vw;
+    z-index: 1;
 }
 
 .up-img div:nth-child(2) img {
-    animation: blink-1 3s forwards;
-
+    top: -2.5vw;
 }
 
-@keyframes blink-1 {
-
-    0%,
-    25%,
-    50%,
-    75%,
-    100% {
-        opacity: 1;
-    }
-
-    15%,
-    30%,
-    55%,
-    80% {
-        opacity: 0;
-    }
+.up-img div:nth-child(3) img {
+    left: 8vw;
 }
 
 .close {
@@ -548,6 +638,7 @@
 }
 
 @media screen and (max-width:768px) {
+
     .modal-box {
         position: absolute;
         top: 35%;
@@ -565,28 +656,30 @@
         font-size: 5vw;
     }
 
-    .modal-box .contact ul li {
-        display: flex;
-        align-items: center;
+    .modal-box .contact p {
         font-size: 2vw;
+        line-height: 2.5vw;
+    }
+
+    .modal-box .contact ul li {
+        font-size: 1.5vw;
         margin: 3vw 0;
     }
 
     .modal-box .contact ul li img {
-        width: 4vw;
-        height: 4vw;
-        margin: 0 1vw;
+        width: 3vw;
+        height: 3vw;
     }
 
     .modal-box .contact ul li:nth-child(1) img {
-        width: 3.5vw;
-        height: 3.5vw;
+        width: 2.5vw;
+        height: 2.5vw;
     }
 
     .up-img {
         position: absolute;
         right: 18%;
-        top: 23%;
+        top: 31%;
         width: 20vw;
     }
 
@@ -617,13 +710,23 @@
         height: 5vw;
     }
 
+    .modal-box .contact p b::after {
+        width: 3.5vw;
+        height: 3vw;
+        left: .8vw;
+        bottom: 3vw;
+        animation: jello-horizontal 1.5s infinite both;
+    }
+
     .skill-list .skill-img {
         width: 70vw;
     }
+
     .skill-list.on .skill-img {
         left: 15%;
         top: 20%;
     }
+
     .skill-list .skill-img a {
         position: absolute;
         top: 1.5vw;

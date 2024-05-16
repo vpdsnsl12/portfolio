@@ -1,19 +1,28 @@
-#work{
+#work {
   position: relative;
   height: 90vw;
 }
-.work-wrap-all{
+
+.work-wrap-all {
   position: relative;
   padding-top: 5vw;
 }
-#work .text-box{
+
+#work .text-box {
   width: 30vw;
   margin-left: 8vw;
   padding: 0 3vw;
 }
-#work .text-box .text{display: none;}
-#work .text-box .text.on{display: block;}
-#work .text-box span.lego{
+
+#work .text-box .text {
+  display: none;
+}
+
+#work .text-box .text.on {
+  display: block;
+}
+
+#work .text-box span.lego {
   position: relative;
   display: block;
   margin-bottom: 3vw;
@@ -23,7 +32,8 @@
   margin-left: .5vw;
   font-size: 1vw;
 }
-#work .text-box span.lego::after{
+
+#work .text-box span.lego::after {
   content: '';
   background-image: url(../../img/project-yellow-logo.png);
   background-repeat: no-repeat;
@@ -35,20 +45,23 @@
   z-index: -1;
 }
 
-#work .text-box h2{
+#work .text-box h2 {
   font-size: 2.5vw;
   color: var(--main-color-blue);
   margin-bottom: .5vw;
 }
-#work .text-box h3{
+
+#work .text-box h3 {
   font-size: 1.5vw;
   color: var(--sub-color-blue);
   margin-bottom: .5vw;
 }
-#work .text-box p{
+
+#work .text-box p {
   font-size: 1vw;
   color: var(--black300);
 }
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -88,10 +101,12 @@
   margin: 3.5vw 0;
   width: 100%;
 }
-.mySwiper .swiper-wrapper{
+
+.mySwiper .swiper-wrapper {
   display: flex;
   align-items: center;
 }
+
 .mySwiper .swiper-slide {
   height: 60%;
   opacity: 0.5;
@@ -112,29 +127,38 @@
   height: 100%;
   object-fit: contain;
 }
-.flex{
+
+.flex {
   display: flex;
 }
-.swiper-button-next, .swiper-button-prev{
+
+.swiper-button-next,
+.swiper-button-prev {
   width: 5vw;
   height: 5vw;
   position: absolute;
   top: 13vw;
   cursor: pointer;
 }
-.swiper-button-next:hover, 
-.swiper-button-prev:hover{
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   background-color: rgba(0, 0, 0, 0.249);
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
   left: 0;
 }
-.swiper-button-next:after, .swiper-button-prev:after {
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
   color: white;
 }
-.swiper-pagination-current{
+
+.swiper-pagination-current {
   color: var(--main-color-yellow);
 }
+
 .mySwiper2 {
   width: 50vw;
   height: 28vw;
@@ -143,13 +167,16 @@
   margin-right: 5vw;
   border-radius: 1vw;
 }
-.mySwiper2 .swiper-wrapper .swiper-slide{
+
+.mySwiper2 .swiper-wrapper .swiper-slide {
   width: 50vw;
 }
-.mySwiper2 .swiper-wrapper .swiper-slide img{
+
+.mySwiper2 .swiper-wrapper .swiper-slide img {
   width: 50vw;
 }
-.swiper-pagination::before{
+
+.swiper-pagination::before {
   content: '';
   background-image: url(../../img/arrow\ \(2\).png);
   width: 1vw;

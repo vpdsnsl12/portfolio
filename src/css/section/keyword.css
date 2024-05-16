@@ -90,3 +90,39 @@ height: 20vw;
     margin-top: 8vw;
     height: 21vw;
 }
+
+@media screen and (max-width:768px) {
+    #keyword {
+        left: -15vw;
+    }
+    
+    #keyword .title_keyword h3 {
+        font-size: 3.5vw;
+    }
+    
+    #keyword .text_box {
+        font-size: 2vw;
+    }
+    
+    #keyword .title_keyword h2 {
+        font-size: 6vw;
+    }
+
+    #keyword.keyword2{
+        padding-top: 8vw;
+
+    }
+    #keyword.keyword3 {
+    margin-top:4vw;
+    margin-left: -12vw;
+    height: 20vw;
+    }
+    
+    #keyword.keyword4 {
+        text-align: right;
+        margin-right: -4vw;
+        margin-top: 8vw;
+        height: 21vw;
+    }
+    
+}

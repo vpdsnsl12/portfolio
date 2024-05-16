@@ -17,6 +17,196 @@
       font-size: 1vw;
       color: var(--black200);
     }
+
+    @media screen and (max-width:768px) {
+      #work {
+        height: 90vh;
+        border: 1px solid #000;
+      }
+
+      .work-wrap-all {
+        position: relative;
+        padding-top: 5vw;
+      }
+      .work-wrap{
+
+      }
+      #work .text-box {
+        width: 30vw;
+        margin-left: 8vw;
+        padding: 0 3vw;
+      }
+
+      #work .text-box .text {
+        display: none;
+      }
+
+      #work .text-box .text.on {
+        display: block;
+      }
+
+      #work .text-box span.lego {
+        position: relative;
+        display: block;
+        margin-bottom: 3vw;
+        z-index: 1;
+        line-height: 3vw;
+        color: var(--white);
+        margin-left: .5vw;
+        font-size: 1vw;
+      }
+
+      #work .text-box span.lego::after {
+        content: '';
+        background-image: url(../../img/project-yellow-logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10vw;
+        height: 3vw;
+        position: absolute;
+        left: -1.2vw;
+        z-index: -1;
+      }
+
+      #work .text-box h2 {
+        font-size: 2.5vw;
+        color: var(--main-color-blue);
+        margin-bottom: .5vw;
+      }
+
+      #work .text-box h3 {
+        font-size: 1.5vw;
+        color: var(--sub-color-blue);
+        margin-bottom: .5vw;
+      }
+
+      #work .text-box p {
+        font-size: 1vw;
+        color: var(--black300);
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper {
+        height: 12vw;
+        box-sizing: border-box;
+        padding: 3vw 0;
+        margin: 3.5vw 0;
+        width: 100%;
+      }
+
+      .mySwiper .swiper-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .mySwiper .swiper-slide {
+        height: 60%;
+        opacity: 0.5;
+        filter: blur(.7px);
+        border-radius: 99px;
+        transition: .35s;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+        filter: blur(0px);
+        height: 80%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 5vw;
+        height: 5vw;
+        position: absolute;
+        top: 13vw;
+        cursor: pointer;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background-color: rgba(0, 0, 0, 0.249);
+      }
+
+      .swiper-button-prev {
+        left: 0;
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        color: white;
+      }
+
+      .swiper-pagination-current {
+        color: var(--main-color-yellow);
+      }
+
+      .mySwiper2 {
+        width: 50vw;
+        height: 28vw;
+        overflow: hidden;
+        position: relative;
+        margin-right: 5vw;
+        border-radius: 1vw;
+      }
+
+      .mySwiper2 .swiper-wrapper .swiper-slide {
+        width: 50vw;
+      }
+
+      .mySwiper2 .swiper-wrapper .swiper-slide img {
+        width: 50vw;
+      }
+
+      .swiper-pagination::before {
+        content: '';
+        background-image: url(../../img/arrow\ \(2\).png);
+        width: 1vw;
+        height: 1vw;
+        position: absolute;
+      }
+    }
   </style>
 </head>
 
@@ -596,7 +786,12 @@
         <div class="on">
           <img src="./src/img/text-box.png" alt="" />
           <div class="text click">
-            <h3><a class="click-modal" href="#">CLICK</a></h3>
+            <h3>새싹 퍼블리셔 등장!</h3>
+          </div>
+          <div class="up-img click-modal">
+            <div><img src="./src/img/flower1.png" alt="" /></div>
+            <div><img src="./src/img/flower2.png" alt="" /></div>
+            <div><img src="./src/img/click me.png" alt="" /></div>
           </div>
         </div>
         <div class="">
@@ -683,14 +878,21 @@
       <a class="skill-close" href="">X</a>
     </div>
     <div class="lego-group"><img src="./src/img/legogroup.png" alt=""></div>
-    
+
   </div>
   <div class="modal">
     <div class="modal-box">
       <div class="contact">
-        <h3>소통을 중요시하는 퍼블리셔 박주희</h3>
-        <h3>CONTACT</h3>
-        <ul>
+        <h3>새싹 퍼블리셔 박주희</h3>
+        <h3>I AM</h3>
+        <p>저는 마치 햇살처럼 환한 에너지를 지닌, 잠재력 넘치는 <b>'새싹'</b>입니다! <br>
+          나무 사이로 비치는 햇살이 마음을 따뜻하게 하는 것처럼, <br>
+          어디서든 새로움을 불어넣고, 분위기를 밝게 만들어 나가는 것이 제 장점입니다.<br><br>
+
+          더불어, 새싹처럼 끊임없이 자라나고 발전해나가는 <br> 성장에 대한 열정을 가지고 있습니다!<br>
+          항상 새로운 도전에 즐거움을 느끼고, 실패를 두려워하지 않으며 <br>
+          성장의 기회로 삼아 나아가는 태도를 가지고 있습니다. </p>
+        <ul class="contact-list">
           <li>
             <img src="./src/img/contact.png" alt="" />vpdsnsl123@naver.com
           </li>
@@ -698,15 +900,8 @@
             <img src="./src/img/contact2.png" alt="" />https://vpdsnsl12.github.io
           </li>
           <li><img src="./src/img/contact3.png" alt="" />010.2634.4685</li>
-          <li>
-            <img src="./src/img/contact4.png" alt="" />UI/UX 웹디자인
-            웹퍼블리셔 프론트엔드 전문가 양성반 수료
-          </li>
         </ul>
-        <div class="up-img">
-          <div><img src="./src/img/me1.svg" alt="" /></div>
-          <div><img src="./src/img/me2.svg" alt="" /></div>
-        </div>
+
         <a class="close" href=";">닫기</a>
       </div>
     </div>
