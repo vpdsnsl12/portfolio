@@ -100,6 +100,7 @@
   padding: 3vw 0;
   margin: 3.5vw 0;
   width: 100%;
+  cursor: grab;
 }
 
 .mySwiper .swiper-wrapper {
@@ -163,6 +164,7 @@
   position: relative;
   margin-right: 5vw;
   border-radius: 1vw;
+  cursor: grab;
 }
 
 .mySwiper2 .swiper-wrapper .swiper-slide {

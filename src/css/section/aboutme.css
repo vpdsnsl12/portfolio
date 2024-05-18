@@ -56,6 +56,7 @@
   position: absolute;
   top: 9vw;
   left: 38vw;
+  cursor: grab;
 }
 
 #about_me .swiper-slide {

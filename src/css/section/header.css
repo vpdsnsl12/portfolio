@@ -108,4 +108,8 @@ h5{
     header.hidden {
         margin-top:-200px;
     }
+    header nav ul li:hover a::after {
+        width: 0vw;
+        height: 0vw;
+    }
 }
