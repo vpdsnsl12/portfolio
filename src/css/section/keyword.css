@@ -91,7 +91,7 @@ height: 20vw;
     height: 21vw;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:960px) {
     #keyword {
         left: -10vw;
     }
@@ -109,7 +109,7 @@ height: 20vw;
     }
 
     #keyword.keyword2{
-        padding-top: 15vw;
+        margin-top: 5vw;
 
     }
     #keyword.keyword3 {

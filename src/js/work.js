@@ -3,13 +3,19 @@ gsap.registerPlugin(ScrollTrigger);
 export function work() {
   document.addEventListener("DOMContentLoaded", function() {
     const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 9.5,
+      slidesPerView: 5,
       centeredSlides: true,
-      spaceBetween: 30,
+      spaceBetween: 0,
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        960: {
+          slidesPerView: 9.5, 
+          spaceBetween: 30,
+        },
       },
     });
 

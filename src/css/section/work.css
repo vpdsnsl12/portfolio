@@ -30,7 +30,7 @@
   line-height: 3vw;
   color: var(--white);
   margin-left: .5vw;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 #work .text-box span.lego::after {

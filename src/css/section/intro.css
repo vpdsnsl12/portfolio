@@ -288,9 +288,9 @@ html {
     width: 5.286%;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:960px) {
     #intro {
-        height: 90vh;
+        height: 130vw;
     }
 
     #intro .intro_inner {

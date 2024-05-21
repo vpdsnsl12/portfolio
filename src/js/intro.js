@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 export function intro() {
     const duration = 1.5;
     const titles = document.querySelectorAll('.intro_title_bg_box div img');
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const isMobile = window.matchMedia('(max-width: 960px)').matches;
 
     const initialPositions = [
         { top: '49%', left: '57%' },

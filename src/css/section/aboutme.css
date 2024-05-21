@@ -633,9 +633,9 @@
   font-size: 1vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   #about_me {
-    height: 80vw;
+    height: 75vw;
   }
 
   #about_me h1 {
@@ -644,7 +644,7 @@
 
   #about_me .bg-img {
     position: relative;
-    margin-top: 24.5vw;
+    margin-top: 26vw;
   }
 
   #about_me h2 {
