@@ -1,844 +1,976 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/symbol.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO PORTFOLIO</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./src/img/symbol.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LEGO PORTFOLIO</title>
-  <link rel="stylesheet" href="./src/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <style>
-    #work .swiper-pagination-fraction {
-      width: 5vw;
-      left: 10.5vw;
-      top: 30.5vw;
-      font-size: 1vw;
-      color: var(--black200);
-    }
-
-    @media screen and (max-width:960px) {
-      #work {
-        height: 150vw;
-        position: relative;
-      }
-
-      .work-wrap-all {
-        padding-top: 13vw;
-        height: 115vw;
-        position: relative;
-      }
-
-      .work-wrap {
-        flex-direction: column;
-      }
-
-      #work .text-box {
-        margin: auto;
-      }
-
-      #work .text-box span.lego {
-        line-height: 7.5vw;
-        font-size: 2.5vw;
-        margin-left: -23.5vw;
-      }
-
+    <style>
       #work .swiper-pagination-fraction {
-        width: 8vw;
-        left: 13.3vw;
-        top: 23.5vw;
-        font-size: 2vw;
+        width: 5vw;
+        left: 10.5vw;
+        top: 30.5vw;
+        font-size: 1vw;
+        color: var(--black200);
       }
 
-      #work .text-box span.lego::after {
-        width: 20vw;
-        height: 14vw;
-        margin-left: -.5vw;
+      @media screen and (max-width: 960px) {
+        #work {
+          height: 150vw;
+          position: relative;
+        }
+
+        .work-wrap-all {
+          padding-top: 13vw;
+          height: 115vw;
+          position: relative;
+        }
+
+        .work-wrap {
+          flex-direction: column;
+        }
+
+        #work .text-box {
+          margin: auto;
+        }
+
+        #work .text-box span.lego {
+          line-height: 7.5vw;
+          font-size: 2.5vw;
+          margin-left: -23.5vw;
+          width: 19vw;
+        }
+
+        #work .swiper-pagination-fraction {
+          width: 8vw;
+          left: 13.3vw;
+          top: 23.5vw;
+          font-size: 2vw;
+        }
+
+        #work .text-box span.lego::after {
+          width: 20vw;
+          height: 14vw;
+          margin-left: -0.5vw;
+        }
+
+        #work .text-box h2 {
+          font-size: 5vw;
+          margin-top: -10vw;
+          width: 55vw;
+          margin-left: 2vw;
+        }
+
+        #work .text-box h3 {
+          font-size: 2.5vw;
+          margin-bottom: 0.5vw;
+          width: 35vw;
+          margin-left: 2.4vw;
+        }
+
+        #work .text-box p {
+          font-size: 2vw;
+          width: 45vw;
+          margin-left: 2.5vw;
+        }
+
+        .swiper.mySwiper {
+          height: 25vw;
+          margin-left: 2vw;
+        }
+
+        .swiper.mySwiper .swiper-slide img {
+          width: 15vw;
+          height: 15vw;
+        }
+
+        .swiper.mySwiper2 {
+          width: 90vw;
+          height: 50vw;
+        }
+
+        .swiper.mySwiper2 .swiper-slide {
+          display: flex;
+        }
+
+        .swiper.mySwiper2 .swiper-slide img {
+          display: block;
+          width: 70vw;
+          height: 39.5vw;
+          border-radius: 3vw;
+        }
+
+        .swiper-slide img {
+          width: 125%;
+        }
       }
+    </style>
+  </head>
 
-      #work .text-box h2 {
-        font-size: 5vw;
-        margin-top: -10vw;
-        width: 55vw;
-        margin-left: 2vw;
-      }
-
-      #work .text-box h3 {
-        font-size: 2.5vw;
-        margin-bottom: .5vw;
-        width: 35vw;
-        margin-left: 2.4vw;
-      }
-
-      #work .text-box p {
-        font-size: 2vw;
-        width: 45vw;
-        margin-left: 2.5vw;
-      }
-
-      .swiper.mySwiper {
-        height: 25vw;
-        margin-left: 2vw;
-      }
-
-      .swiper.mySwiper .swiper-slide img {
-        width: 15vw;
-        height: 15vw;
-      }
-
-      .swiper.mySwiper2 {
-        width: 90vw;
-        height: 50vw;
-      }
-
-      .swiper.mySwiper2 .swiper-slide {
-        display: flex;
-      }
-
-      .swiper.mySwiper2 .swiper-slide img {
-        display: block;
-        width: 70vw;
-        height: 39.5vw;
-        border-radius: 3vw;
-      }
-
-      .swiper-slide img {
-        width: 125%;
-      }
-
-    }
-  </style>
-</head>
-
-<body>
-  <header id="header" class="flex">
-    <h1><a href="#"><img src="./src/img/symbol.png" alt=""></a></h1>
-    <nav>
-      <ul class="flex">
-        <li><a href="#intro">Main</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#about_me">About_me</a></li>
-      </ul>
-    </nav>
-    <h5></h5>
-  </header>
-  <section id="intro">
-    <div class="intro_inner">
-      <div class="lego_font">
-        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (12).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (13).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (14).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (15).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (16).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
-        <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
-      </div>
-      <div class="intro_title">
-        <h1>을 현실로,</h1>
-        <h1>코드를</h1>
-        <h1>하는 건축가</h1>
-      </div>
-      <div class="intro_title_bg_box">
-        <div><img src="./src/img/bgcolor.png" alt="" /></div>
-        <div><img src="./src/img/bgcolor.png" alt="" /></div>
-        <div><img src="./src/img/bgcolor.png" alt="" /></div>
-      </div>
-    </div>
-    <div id="keyword" class="keyword keyword1">
-      <div class="title_keyword">
-        <h2>Infinite</h2>
-        <h3>무한한 잠재력</h3>
-      </div>
-      <div class="text_box">
-        <span class="text"></span><span class="blink">|</span>
-      </div>
-    </div>
-  </section>
-  <section id="work" class="section">
-    <div class="work-wrap-all">
-      <div class="work-wrap flex">
-        <div class="text-box">
-          <div class="text on">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/grid/index.html#" target="_blank">작업물
-                보기</a></span>
-            <h2>Wiggle Wiggle</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/dotori/dotori.html" target="_blank">작업물
-                보기</a></span>
-            <h2>DOTORI</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/pethroom/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>PETHROOM</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/nintendo/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>NINTENDO MARIO</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/naver.kids/naver.html" target="_blank">작업물
-                보기</a></span>
-            <h2>쥬니버스쿨</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/webtoon/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>WEBTOON</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/ace/test.html#;" target="_blank">작업물
-                보기</a></span>
-            <h2>ACE</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/pizza/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>FRED PIZZA</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/kids/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>KIDS LALA</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/selecto/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>SELECTO</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/cheongwadae/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>청와대</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/wodam/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>WOODAM LIGHTING</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/juhee/interpark.html" target="_blank">작업물
-                보기</a></span>
-            <h2>INTERPARK</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/NEWYORK/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>BARNEYS NEWYORK</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/if-kakao/ifkakao2022.html" target="_blank">작업물
-                보기</a></span>
-            <h2>IF KAKAO</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/wmpo/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>위메프오</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/10X10/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>10X10</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/yes24/index.html#;" target="_blank">작업물
-                보기</a></span>
-            <h2>YES24</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/unicef/unicef.html" target="_blank">작업물
-                보기</a></span>
-            <h2>UNICEF</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="text">
-            <span class="lego"><a href="https://vpdsnsl12.github.io/work/chilsung/index.html" target="_blank">작업물
-                보기</a></span>
-            <h2>칠성사이다</h2>
-            <h3>작업물 관련 한줄 멘트</h3>
-            <p>
-              어떤 점을 고려했는지 등 <br />
-              나의 고민이 묻어나는 부분과 <br />
-              리뉴얼 된 부분에 대한 내용 첨부
-            </p>
-          </div>
-          <div class="swiper-pagination"></div>
+  <body>
+    <header id="header" class="flex">
+      <h1>
+        <a href="#"><img src="./src/img/symbol.png" alt="" /></a>
+      </h1>
+      <nav>
+        <ul class="flex">
+          <li><a href="#intro">Main</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#about_me">About_me</a></li>
+        </ul>
+      </nav>
+      <h5></h5>
+    </header>
+    <section id="intro">
+      <div class="intro_inner">
+        <div class="lego_font">
+          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (12).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (13).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (14).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (15).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (16).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (1).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (2).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (4).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (5).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (6).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (7).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (8).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (9).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (10).png" alt="" />
+          <img class="img" src="./src/img/sangsang/font (11).png" alt="" />
         </div>
-        <div class="swiper mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (20).png" alt="Wiggle" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (19).png" alt="DOTORI" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (18).png" alt="PETHROOM" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (17).png" alt="NINTENDO" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (16).png" alt="쥬니버스쿨" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (15).png" alt="WEBTOON" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (14).png" alt="ACE" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (13).png" alt="FREDPIZZA" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (12).png" alt="KIDSLALA" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (11).png" alt="SELECTO" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (10).png" alt="청와대" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (9).png" alt="LIGHTING" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (8).png" alt="INTERPARK" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (7).png" alt="BARNEYS NEWYORK" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (6).png" alt="IF KAKAO" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (5).png" alt="위메프오" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (4).png" alt="10X10" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (3).png" alt="YES24" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (2).png" alt="UNICEF" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/main-img (1).png" alt="칠성사이다" />
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+        <div class="intro_title">
+          <h1>을 현실로,</h1>
+          <h1>코드를</h1>
+          <h1>하는 건축가</h1>
+        </div>
+        <div class="intro_title_bg_box">
+          <div><img src="./src/img/bgcolor.png" alt="" /></div>
+          <div><img src="./src/img/bgcolor.png" alt="" /></div>
+          <div><img src="./src/img/bgcolor.png" alt="" /></div>
         </div>
       </div>
-      <div class="thumbsSlider swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./src/img/./logo-img (8).png" alt="Wiggle" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (4).png" alt="DOTORI" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (20).png" alt="PETHROOM" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (14).png" alt="NINTENDO" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (3).png" alt="쥬니버스쿨" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (10).png" alt="WEBTOON" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (2).png" alt="ACE" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (13).png" alt="FREDPIZZA" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (9).png" alt="KIDSLALA" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (16).png" alt="SELECTO" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/./logo-img (15).png" alt="청와대" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (17).png" alt="LIGHTING" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (18).png" alt="INTERPARK" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (1).png" alt="BARNEYS NEWYORK" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (19).png" alt="IF KAKAO" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (6).png" alt="위메프오" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (11).png" alt="10X10" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (7).png" alt="YES24" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (12).png" alt="UNICEF" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/logo-img (5).png" alt="칠성사이다" />
-          </div>
+      <div id="keyword" class="keyword keyword1">
+        <div class="title_keyword">
+          <h2>Infinite</h2>
+          <h3>무한한 잠재력</h3>
+        </div>
+        <div class="text_box">
+          <span class="text"></span><span class="blink">|</span>
         </div>
       </div>
-    </div>
-    <div id="keyword" class="keyword keyword2">
-      <div class="title_keyword">
-        <h2>Concentration</h2>
-        <h3>멈추지않고 달리다</h3>
-      </div>
-      <div class="text_box">
-        <span class="text2"></span><span class="blink">|</span>
-      </div>
-    </div>
-  </section>
-  <section id="project" class="section">
-    <div class="project-wrap-all">
-      <div class="project-wrap1">
-        <div class="text-box on">
-          <p>WEB</p>
-          <h2>여기어때 리뉴얼</h2>
-        </div>
-        <div class="text-box">
-          <p>APP</p>
-          <h2>GET GOAL</h2>
-        </div>
-        <div class="text-box">
-          <p>WEB</p>
-          <h2>포트폴리오</h2>
-        </div>
-        <div class="swiper mySwiper3">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./src/img/box.png" />
-              <div class="text">
-                <h3>
-                  더 직관적이고 <br />
-                  취향저격적인1
-                </h3>
-                <p>
-                  '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
-                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
-                  <br />
-                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
-                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
-                  수립하였습니다. '
-                </p>
-                <span><a
-                    href="https://www.figma.com/design/FMQORygNshDTlDYWLC0WS3/%EC%97%AC%EA%B8%B0%EC%96%B4%EB%95%8C?node-id=1%3A5&t=GNrAsJkHttyBLn0f-1"
-                    target="_blank">피그마 디자인시스템</a></span>
-                <img src="./src/img/project-img.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/box.png" />
-              <div class="text">
-                <h3>
-                  더 직관적이고 <br />
-                  취향저격적인2
-                </h3>
-                <p>
-                  '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
-                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
-                  <br />
-                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
-                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
-                  수립하였습니다. '
-                </p>
-                <span><a
-                    href="https://www.figma.com/design/WG62Soxgb7TChhNgz58BIU/%EA%B0%9C%EA%B3%A8%EA%B0%9C%EA%B3%A8(Get-Goal)?node-id=0-1&t=GNrAsJkHttyBLn0f-0"
-                    target="_blank">피그마 디자인시스템</a></span>
-                <img src="./src/img/project-img3.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/img/box.png" />
-              <div class="text">
-                <h3>
-                  더 직관적이고 <br />
-                  취향저격적인3
-                </h3>
-                <p>
-                  '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
-                  30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
-                  <br />
-                  여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
-                  고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
-                  수립하였습니다. '
-                </p>
-                <span><a
-                    href="https://www.figma.com/design/kSKf3zlCBO7Avdj52LOs9N/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=dL5RhXKn5AqvmvhW-1"
-                    target="_blank">피그마 디자인시스템</a></span>
-                <img src="./src/img/project-portfolio.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-      <div class="project-wrap2">
-        <h1><img src="./src/img/project.png" alt="" /></h1>
-        <h3><a href="https://vpdsnsl12.github.io/trip/" target="_blank">포르세스 살펴보기</a></h3>
-        <div class="box">
-          <p>간단한 후기를 정리해서 넣기</p>
-        </div>
-      </div>
-    </div>
-    <div id="keyword" class="keyword keyword3">
-      <div class="title_keyword">
-        <h2>Flexibility</h2>
-        <h3>조립과 해체</h3>
-      </div>
-      <div class="text_box">
-        <span class="text3"></span><span class="blink">|</span>
-      </div>
-    </div>
-    <div id="keyword" class="keyword keyword4">
-      <div class="title_keyword">
-        <h2>Communication</h2>
-        <h3>협업과 소통</h3>
-      </div>
-      <div class="text_box">
-        <span class="text4"></span><span class="blink">|</span>
-      </div>
-    </div>
-  </section>
-  <section id="about_me" class="section">
-    <div class="about-wrap">
-      <h1><img src="./src/img/aboutme.png" alt="" /></h1>
-      <div class="bg-img">
-        <img class="" src="./src/img/japan.png" alt="" />
-        <img class="on" src="./src/img/korea.png" alt="" />
-      </div>
-      <div class="swiper mySwiper5">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <h2>2024.05</h2>
-            <h3>국비지원교육 수료</h3>
-            <p>MBC아카데미 컴퓨터교육센터</p>
-          </div>
-          <div class="swiper-slide">
-            <h2>2023.11</h2>
-            <h3>국비지원교육 시작</h3>
-            <p>
-              UI/UX 웹디자인 웹퍼블리셔<br />
-              프론트엔드 전문가 양성반
-            </p>
-          </div>
-          <div class="swiper-slide">
-            <h2>2023.6</h2>
-            <h3>서울에서의 생활</h3>
-            <p>마케팅 대행사에서의 경험</p>
-          </div>
-          <div class="swiper-slide">
-            <h2>2023.04</h2>
-            <h3>대학 졸업후 한국으로</h3>
-          </div>
-          <div class="swiper-slide">
-            <h2>2019</h2>
-            <h3>무사시노 대학생활</h3>
-            <p>일본어 스피치 대회 최우수상</p>
-            <p>꾸준한 성적향상으로 성적장학금 수여</p>
-          </div>
-          <div class="swiper-slide">
-            <h2>2017</h2>
-            <h3>일본에서의 유학생활 시작</h3>
-            <p>도쿄 갤럭시 어학원</p>
-            <p>JLPT N1급 취득</p>
-            <p>다양한 아르바이트를 통해 수많은 환경에서 적응</p>
-          </div>
-        </div>
-      </div>
-      <div class="text-box-img">
-        <div class="on">
-          <img src="./src/img/text-box.png" alt="" />
-          <div class="text click">
-            <h3>새싹 퍼블리셔 등장!</h3>
-          </div>
-          <div class="up-img click-modal">
-            <div><img src="./src/img/flower1.png" alt="" /></div>
-            <div><img src="./src/img/flower2.png" alt="" /></div>
-            <div><img src="./src/img/click me.png" alt="" /></div>
-          </div>
-        </div>
-        <div class="">
-          <img src="./src/img/text-box.png" alt="" />
-          <div class="text skill-box">
-            <a href="./src/img/skill-list.png" data-fancybox="gallery"></a>
-            <h3>SKILL</h3>
-            <span class="click-skill"><a href="#">
-                클릭하여 자세히 보기</a>
-            </span>
-            <div>
-              <ul class="flex">
-                <li><img src="./src/img/icon-skill-html.png" alt="" /></li>
-                <li><img src="./src/img/skill-icons_css.png" alt="" /></li>
-                <li>
-                  <img src="./src/img/icon-skill-javascript.png" alt="" />
-                </li>
-                <li><img src="./src/img/icon-skill-scss.png" alt="" /></li>
-                <li><img src="./src/img/icon-skill-j.png" alt="" /></li>
-              </ul>
-              <ul class="flex">
-                <li><img src="./src/img/icon-skill-p.png" alt="" /></li>
-                <li>
-                  <img class="figma" src="./src/img/icon-skill-fi.png" alt="" />
-                </li>
-                <li><img src="./src/img/icon-skill-ai.png" alt="" /></li>
-                <li><img src="./src/img/icon-skill-git.png" alt="" /></li>
-                <li><img src="./src/img/icon-skill-github.png" alt="" /></li>
-              </ul>
-            </div>
-            <p>웹 디자인 기능사 취득</p>
-            <span>2024.01 필기시험합격</span>
-            <span>2024.04 실기시험합격</span>
-          </div>
-        </div>
-        <div class="">
-          <img src="./src/img/text-box.png" alt="" />
-          <div class="text no-padding flex">
-            <div class="text-text">
-              <h3><b>기록하는 습관 만들기</b></h3>
+    </section>
+    <section id="work" class="section">
+      <div class="work-wrap-all">
+        <div class="work-wrap flex">
+          <div class="text-box">
+            <div class="text on">
+              <span class="lego">원페이지스크롤</span>
+              <h2>청와대, 국민품으로</h2>
+              <h3>
+                <a
+                  href="https://vpdsnsl12.github.io/work/cheongwadae/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
               <p>
-                카테고리 : 일상, 공부, 맛집 <br />
-                게시물 : 총56건 <br />
-                총 조회수 : 3,691회
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
               </p>
             </div>
-            <img class="computer" src="./src/img/computer.png" alt="" />
+            <div class="text">
+              <span class="lego">ISOTOPE</span>
+              <h2>10X10</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/10X10/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">swiper활용</span>
+              <h2>ACE BED</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/ace/test.html#;"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">반응형페이지</span>
+              <h2>BARNEYS NEWYORK</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/NEWYORK/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">원페이지스크롤</span>
+              <h2>FRED PIZZA</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/pizza/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">커스텀스크롤</span>
+              <h2>WEBTOON</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/webtoon/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">그리드</span>
+              <h2>WIGGLE WIGGLE</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/grid/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">swiper 활용</span>
+              <h2>YES24</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/yes24/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">원페이지스크롤</span>
+              <h2>위메프오</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/wmpo/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">원페이지스크롤</span>
+              <h2>제놀</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/Tong/zenol.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">반응형페이지</span>
+              <h2>IF KAKAO</h2>
+              <h3>
+                <a
+                  href="https://vpdsnsl12.github.io/work/if-kakao/ifkakao2022.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">애니메이션콜백</span>
+              <h2>NINTENDO</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/nintendo/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">반응형페이지</span>
+              <h2>UNICEF</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/unicef/unicef.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">swiper활용</span>
+              <h2>WOODAM LIGHTING</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/wodam/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">CSS 슬라이드</span>
+              <h2>메가스터디BOOKS</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/megastudy/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">반응형페이지</span>
+              <h2>쥬니버스쿨</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/naver.kids/naver.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">클론코딩</span>
+              <h2>칠성사이다</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/chilsung/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">클론코딩</span>
+              <h2>INTERPARK투어</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/juhee/interpark.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">리뉴얼페이지</span>
+              <h2>PETHROOM</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/pethroom/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">swiper활용</span>
+              <h2>SELECTO</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/selecto/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">클론코딩</span>
+              <h2>키즈라라</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/kids/index.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="text">
+              <span class="lego">콜론코딩</span>
+              <h2>DOTORI</h2>
+              <h3>
+                <a href="https://vpdsnsl12.github.io/work/dotori/dotori.html"
+                  >페이지로 이동하기</a
+                >
+              </h3>
+              <p>
+                어떤 점을 고려했는지 등 <br />
+                나의 고민이 묻어나는 부분과 <br />
+                리뉴얼 된 부분에 대한 내용 첨부
+              </p>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (10).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (4).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (14).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (7).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (13).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (15).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (20).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (3).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (21).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img(23).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (6).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (17).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (2).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (9).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (22).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (16).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (1).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (8).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (18).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (11).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (12).png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/main-img (19).png" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <div class=""></div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/img/./logo-img (15).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (11).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (2).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (1).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (13).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (10).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (8).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (7).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/img-logo (21).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/img-logo (23).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/./logo-img (19).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (14).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (12).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (17).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/img-logo (22).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (3).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (5).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (18).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (20).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (16).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (9).png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/img/logo-img (4).png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyword" class="keyword keyword2">
+        <div class="title_keyword">
+          <h2>Concentration</h2>
+          <h3>멈추지않고 달리다</h3>
+        </div>
+        <div class="text_box">
+          <span class="text2"></span><span class="blink">|</span>
+        </div>
+      </div>
+    </section>
+    <section id="project" class="section">
+      <div class="project-wrap-all">
+        <div class="project-wrap1">
+          <div class="text-box on">
+            <p>WEB</p>
+            <h2>여기어때 리뉴얼</h2>
+          </div>
+          <div class="text-box">
+            <p>APP</p>
+            <h2>GET GOAL</h2>
+          </div>
+          <div class="text-box">
+            <p>WEB</p>
+            <h2>포트폴리오</h2>
+          </div>
+          <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/img/box.png" />
+                <div class="text">
+                  <h3>
+                    더 직관적이고 <br />
+                    취향저격적인1
+                  </h3>
+                  <p>
+                    '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
+                    30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
+                    <br />
+                    여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
+                    고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
+                    수립하였습니다. '
+                  </p>
+                  <span
+                    ><a
+                      href="https://www.figma.com/design/FMQORygNshDTlDYWLC0WS3/%EC%97%AC%EA%B8%B0%EC%96%B4%EB%95%8C?node-id=1%3A5&t=GNrAsJkHttyBLn0f-1"
+                      target="_blank"
+                      >피그마 디자인시스템</a
+                    ></span
+                  >
+                  <img src="./src/img/project-img.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/box.png" />
+                <div class="text">
+                  <h3>
+                    더 직관적이고 <br />
+                    취향저격적인2
+                  </h3>
+                  <p>
+                    '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
+                    30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
+                    <br />
+                    여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
+                    고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
+                    수립하였습니다. '
+                  </p>
+                  <span
+                    ><a
+                      href="https://www.figma.com/design/WG62Soxgb7TChhNgz58BIU/%EA%B0%9C%EA%B3%A8%EA%B0%9C%EA%B3%A8(Get-Goal)?node-id=0-1&t=GNrAsJkHttyBLn0f-0"
+                      target="_blank"
+                      >피그마 디자인시스템</a
+                    ></span
+                  >
+                  <img src="./src/img/project-img3.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/img/box.png" />
+                <div class="text">
+                  <h3>
+                    더 직관적이고 <br />
+                    취향저격적인3
+                  </h3>
+                  <p>
+                    '취향에 맞는 숙소에서의 휴식과, 다양한 경험을 원하는 <br />
+                    30대를 타겟으로 하며, 근본적인 <b>니즈를 만족</b>시키면서도
+                    <br />
+                    여기어때만의 차별적인 서비스를 경험할 수 있는 <br />
+                    고객의 <b>취향을 만족</b>시키는 브랜드 방향성을
+                    수립하였습니다. '
+                  </p>
+                  <span
+                    ><a
+                      href="https://www.figma.com/design/kSKf3zlCBO7Avdj52LOs9N/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=dL5RhXKn5AqvmvhW-1"
+                      target="_blank"
+                      >피그마 디자인시스템</a
+                    ></span
+                  >
+                  <img src="./src/img/project-portfolio.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="project-wrap2">
+          <h1><img src="./src/img/project.png" alt="" /></h1>
+          <h3>
+            <a href="https://vpdsnsl12.github.io/trip/" target="_blank"
+              >포르세스 살펴보기</a
+            >
+          </h3>
+          <div class="box">
+            <p>간단한 후기를 정리해서 넣기</p>
+          </div>
+        </div>
+      </div>
+      <div id="keyword" class="keyword keyword3">
+        <div class="title_keyword">
+          <h2>Flexibility</h2>
+          <h3>조립과 해체</h3>
+        </div>
+        <div class="text_box">
+          <span class="text3"></span><span class="blink">|</span>
+        </div>
+      </div>
+      <div id="keyword" class="keyword keyword4">
+        <div class="title_keyword">
+          <h2>Communication</h2>
+          <h3>협업과 소통</h3>
+        </div>
+        <div class="text_box">
+          <span class="text4"></span><span class="blink">|</span>
+        </div>
+      </div>
+    </section>
+    <section id="about_me" class="section">
+      <div class="about-wrap">
+        <h1><img src="./src/img/aboutme.png" alt="" /></h1>
+        <div class="bg-img">
+          <img class="" src="./src/img/japan.png" alt="" />
+          <img class="on" src="./src/img/korea.png" alt="" />
+        </div>
+        <div class="swiper mySwiper5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h2>2024.05</h2>
+              <h3>국비지원교육 수료</h3>
+              <p>MBC아카데미 컴퓨터교육센터</p>
+            </div>
+            <div class="swiper-slide">
+              <h2>2023.11</h2>
+              <h3>국비지원교육 시작</h3>
+              <p>
+                UI/UX 웹디자인 웹퍼블리셔<br />
+                프론트엔드 전문가 양성반
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <h2>2023.6</h2>
+              <h3>서울에서의 생활</h3>
+              <p>마케팅 대행사에서의 경험</p>
+            </div>
+            <div class="swiper-slide">
+              <h2>2023.04</h2>
+              <h3>대학 졸업후 한국으로</h3>
+            </div>
+            <div class="swiper-slide">
+              <h2>2019</h2>
+              <h3>무사시노 대학생활</h3>
+              <p>일본어 스피치 대회 최우수상</p>
+              <p>꾸준한 성적향상으로 성적장학금 수여</p>
+            </div>
+            <div class="swiper-slide">
+              <h2>2017</h2>
+              <h3>일본에서의 유학생활 시작</h3>
+              <p>도쿄 갤럭시 어학원</p>
+              <p>JLPT N1급 취득</p>
+              <p>다양한 아르바이트를 통해 수많은 환경에서 적응</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-box-img">
+          <div class="on">
+            <img src="./src/img/text-box.png" alt="" />
+            <div class="text click">
+              <h3>새싹 퍼블리셔 등장!</h3>
+            </div>
+            <div class="up-img click-modal">
+              <div><img src="./src/img/flower1.png" alt="" /></div>
+              <div><img src="./src/img/flower2.png" alt="" /></div>
+              <div><img src="./src/img/click me.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="">
+            <img src="./src/img/text-box.png" alt="" />
+            <div class="text skill-box">
+              <a href="./src/img/skill-list.png" data-fancybox="gallery"></a>
+              <h3>SKILL</h3>
+              <span class="click-skill"
+                ><a href="#"> 클릭하여 자세히 보기</a>
+              </span>
+              <div>
+                <ul class="flex">
+                  <li><img src="./src/img/icon-skill-html.png" alt="" /></li>
+                  <li><img src="./src/img/skill-icons_css.png" alt="" /></li>
+                  <li>
+                    <img src="./src/img/icon-skill-javascript.png" alt="" />
+                  </li>
+                  <li><img src="./src/img/icon-skill-scss.png" alt="" /></li>
+                  <li><img src="./src/img/icon-skill-j.png" alt="" /></li>
+                </ul>
+                <ul class="flex">
+                  <li><img src="./src/img/icon-skill-p.png" alt="" /></li>
+                  <li>
+                    <img
+                      class="figma"
+                      src="./src/img/icon-skill-fi.png"
+                      alt=""
+                    />
+                  </li>
+                  <li><img src="./src/img/icon-skill-ai.png" alt="" /></li>
+                  <li><img src="./src/img/icon-skill-git.png" alt="" /></li>
+                  <li><img src="./src/img/icon-skill-github.png" alt="" /></li>
+                </ul>
+              </div>
+              <p>웹 디자인 기능사 취득</p>
+              <span>2024.01 필기시험합격</span>
+              <span>2024.04 실기시험합격</span>
+            </div>
+          </div>
+          <div class="">
+            <img src="./src/img/text-box.png" alt="" />
+            <div class="text no-padding flex">
+              <div class="text-text">
+                <h3><b>기록하는 습관 만들기</b></h3>
+                <p>
+                  카테고리 : 일상, 공부, 맛집 <br />
+                  게시물 : 총56건 <br />
+                  총 조회수 : 3,691회
+                </p>
+              </div>
+              <img class="computer" src="./src/img/computer.png" alt="" />
+            </div>
+          </div>
+          <div class=""></div>
+          <div>
+            <img src="./src/img/text-box.png" alt="" />
+            <div class="text">
+              <h3><b>일본어능력시험 합격</b></h3>
+              <p>N2취득 후 6개월만에 N1 취득</p>
+              <span class="span-text">고도의 문법, 한자, 어휘를 습득하여</span>
+              <span class="span-text">사회생활이 가능한 정도와</span>
+              <span class="span-text">
+                대학에서 학습, 연구가 가능한 일본어 능력</span
+              >
+              <img class="gengo" src="./src/img/gengo.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <img src="./src/img/text-box.png" alt="" />
+            <div class="text">
+              <h3><b>박주희</b>(1997.12.18)</h3>
+              <p>서울 관악구 신림동 거주</p>
+              <img class="juhee" src="./src/img/juhee.jpg" alt="" />
+            </div>
+          </div>
+        </div>
         <div>
-          <img src="./src/img/text-box.png" alt="" />
-          <div class="text">
-            <h3><b>일본어능력시험 합격</b></h3>
-            <p>N2취득 후 6개월만에 N1 취득</p>
-            <span class="span-text">고도의 문법, 한자, 어휘를 습득하여</span>
-            <span class="span-text">사회생활이 가능한 정도와</span>
-            <span class="span-text">
-              대학에서 학습, 연구가 가능한 일본어 능력</span>
-            <img class="gengo" src="./src/img/gengo.png" alt="" />
-          </div>
-        </div>
-        <div>
-          <img src="./src/img/text-box.png" alt="" />
-          <div class="text">
-            <h3><b>박주희</b>(1997.12.18)</h3>
-            <p>서울 관악구 신림동 거주</p>
-            <img class="juhee" src="./src/img/juhee.jpg" alt="" />
+          <div class="arrow">
+            <div><img src="./src/img/arrow-down.png" alt="" /></div>
+            <div><img src="./src/img/arrow-down.png" alt="" /></div>
+            <div><img src="./src/img/arrow-down.png" alt="" /></div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="arrow">
-          <div><img src="./src/img/arrow-down.png" alt="" /></div>
-          <div><img src="./src/img/arrow-down.png" alt="" /></div>
-          <div><img src="./src/img/arrow-down.png" alt="" /></div>
+    </section>
+    <div class="skill-list">
+      <div class="skill-img">
+        <img src="./src/img/skill-list.png" alt="" />
+        <a class="skill-close" href="">X</a>
+      </div>
+      <div class="lego-group"><img src="./src/img/legogroup.png" alt="" /></div>
+    </div>
+    <div class="modal">
+      <div class="modal-box">
+        <div class="contact">
+          <h3>새싹 퍼블리셔 박주희</h3>
+          <h3>Who am I</h3>
+          <p>
+            저는 마치 햇살처럼 환한 에너지를 지닌, 잠재력 넘치는
+            <b>'새싹'</b>입니다! <br />
+            나무 사이로 비치는 햇살이 마음을 따뜻하게 하는 것처럼, <br />
+            어디서든 새로움을 불어넣고, 분위기를 밝게 만들어 나가는 것이 제
+            장점입니다.<br /><br />
+
+            더불어, 새싹처럼 끊임없이 자라나고 발전해나가는 <br />
+            성장에 대한 열정을 가지고 있습니다!<br />
+            항상 새로운 도전에 즐거움을 느끼고, 실패를 두려워하지 않으며 <br />
+            성장의 기회로 삼아 나아가는 태도를 가지고 있습니다.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <img src="./src/img/contact.png" alt="" />vpdsnsl123@naver.com
+            </li>
+            <li>
+              <img
+                src="./src/img/contact2.png"
+                alt=""
+              />https://vpdsnsl12.github.io
+            </li>
+            <li><img src="./src/img/contact3.png" alt="" />010.2634.4685</li>
+          </ul>
+
+          <a class="close" href=";">닫기</a>
         </div>
       </div>
     </div>
-  </section>
-  <div class="skill-list">
-    <div class="skill-img">
-      <img src="./src/img/skill-list.png" alt="">
-      <a class="skill-close" href="">X</a>
-    </div>
-    <div class="lego-group"><img src="./src/img/legogroup.png" alt=""></div>
-
-  </div>
-  <div class="modal">
-    <div class="modal-box">
-      <div class="contact">
-        <h3>새싹 퍼블리셔 박주희</h3>
-        <h3>Who am I</h3>
-        <p>저는 마치 햇살처럼 환한 에너지를 지닌, 잠재력 넘치는 <b>'새싹'</b>입니다! <br>
-          나무 사이로 비치는 햇살이 마음을 따뜻하게 하는 것처럼, <br>
-          어디서든 새로움을 불어넣고, 분위기를 밝게 만들어 나가는 것이 제 장점입니다.<br><br>
-
-          더불어, 새싹처럼 끊임없이 자라나고 발전해나가는 <br> 성장에 대한 열정을 가지고 있습니다!<br>
-          항상 새로운 도전에 즐거움을 느끼고, 실패를 두려워하지 않으며 <br>
-          성장의 기회로 삼아 나아가는 태도를 가지고 있습니다. </p>
-        <ul class="contact-list">
-          <li>
-            <img src="./src/img/contact.png" alt="" />vpdsnsl123@naver.com
-          </li>
-          <li>
-            <img src="./src/img/contact2.png" alt="" />https://vpdsnsl12.github.io
-          </li>
-          <li><img src="./src/img/contact3.png" alt="" />010.2634.4685</li>
-        </ul>
-
-        <a class="close" href=";">닫기</a>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="./src/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-</body>
-
+    <script type="module" src="./src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </body>
 </html>

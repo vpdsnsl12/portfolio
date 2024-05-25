@@ -5,7 +5,7 @@
 
 .work-wrap-all {
   position: relative;
-  padding-top: 5vw;
+  padding-top: 7vw;
 }
 
 #work .text-box {
@@ -29,8 +29,9 @@
   z-index: 1;
   line-height: 3vw;
   color: var(--white);
-  margin-left: .5vw;
-  font-size: 1.2vw;
+  font-size: 1vw;
+  width: 8vw;
+  text-align: center;
 }
 
 #work .text-box span.lego::after {
@@ -41,7 +42,7 @@
   width: 10vw;
   height: 3vw;
   position: absolute;
-  left: -1.2vw;
+  left: -.4vw;
   z-index: -1;
 }
 
