@@ -199,8 +199,7 @@
 }
 
 .click h3 {
-  margin-top: 1vw;
-  margin-left: 1vw;
+  margin-left: 3vw;
 }
 
 @keyframes heartbeat {
@@ -442,17 +441,15 @@
 
 .up-img {
   position: absolute;
-  left: 5vw;
-  top: 8vw;
+  left: 6.5vw;
+  top: 4vw;
   width: 8vw;
   z-index: 0;
   cursor: pointer;
 }
-
-.up-img:hover div:nth-child(2) img {
-  animation: jello-horizontal 0.9s both;
+.up-img:hover img{
+transform: scale(1.5);
 }
-
 @keyframes jello-horizontal {
   0% {
     transform: scale3d(1, 1, 1);
@@ -487,21 +484,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 8vw;
+  width: 9vw;
+  border-radius: 1vw;
+  transition: .4s;
 }
-
-.up-img div:nth-child(1) img {
-  top: 4vw;
-  z-index: 1;
-}
-
-.up-img div:nth-child(2) img {
-  top: -2.5vw;
-}
-
-.up-img div:nth-child(3) img {
-  left: 8vw;
-}
+.up-img:hover img{
+  transform: scale(2.7);
+  }
 
 .close {
   width: 3vw;
@@ -786,21 +775,18 @@
 
   .up-img {
     position: absolute;
-    top: 31%;
-    width: 25vw;
+    top: 5.5vw;
+    left: 10vw;
   }
 
   .up-img img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 13vw;
+    width: 14vw;
   }
-  .up-img div:nth-child(1) img {
-    top: 8vw;
-  }
-  .up-img div:nth-child(3) img {
-    left: 13vw;
+  .up-img:hover img{
+    transform: scale(2.4);
   }
   .close {
     width: 5vw;

@@ -45,8 +45,11 @@
 .project-wrap2 .box p {
   color: var(--white);
   text-align: center;
-  font-size: 1.5vw;
-  line-height: 5vw;
+  font-size: 1.1vw;
+  line-height: 1.8vw;
+  height: 10vw;
+  margin-top: -3vw;
+  font-size: 1.1vw;
 }
 
 #project .swiper {
@@ -231,13 +234,13 @@
   
   .project-wrap2 .box {
     width: 60vw;
-    height: 15vw;
+    height: 35vw;
     margin-left: -10vw;
   }
   
   .project-wrap2 .box p {
-    font-size: 2.8vw;
-    margin-top: -1.5vw;
+    font-size: 2.5vw;
+    margin-top: -2vw;
     line-height: 5vw;
   }
   
@@ -254,11 +257,11 @@
   #project .swiper-slide .text p {
     margin-top: 2vw;
     font-size: 2vw;
-    line-height: 3vw;
+    line-height: 3.5vw;
   }
 
   #project .swiper-slide .text span {
-    margin-top: 8vw;
+    margin-top: 6vw;
     font-size: 2.2vw;
   }
   

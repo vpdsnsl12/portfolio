@@ -2,7 +2,15 @@
   position: relative;
   height: 90vw;
 }
-
+#work .comment{
+  display: inline-block;
+  position: absolute;
+  left: 11vw;
+  top: 32.3vw;
+  font-size: .9vw;
+  color: var(--black100);
+  font-family: var(--mainKor-font);
+}
 .work-wrap-all {
   position: relative;
   padding-top: 7vw;
@@ -183,3 +191,4 @@
   height: 1vw;
   position: absolute;
 }
+
