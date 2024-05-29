@@ -89,4 +89,11 @@ export function header() {
 
   // 초기 호출
   updateNav();
+
+  document.addEventListener("mousemove", (e) => {
+    let mouseX = e.pageX + 15;
+    let mouseY = e.pageY + 15;
+    let cursor = document.querySelector(".cursor");
+    cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+  });
 }

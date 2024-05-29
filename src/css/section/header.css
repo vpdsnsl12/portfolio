@@ -88,6 +88,13 @@ h5{
     top: 0;
     left: 0;
 }
+div.cursor {
+    position: absolute;
+    width: 40px; /* 커스텀 커서 이미지의 크기에 맞게 조정 */
+    pointer-events: none;
+    z-index: 1000;
+    transition: transform 0.15s ease-out;
+  }
 
 @media screen and (max-width:960px) {
     header{
