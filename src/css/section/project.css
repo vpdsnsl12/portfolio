@@ -3,7 +3,9 @@
   height: 110vw;
   padding: 6vw 13vw 8vw;
 }
-
+#project a:hover{
+  color: var(--main-color-yellow);
+}
 .project-wrap-all {
   display: flex;
 }

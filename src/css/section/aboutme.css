@@ -2,7 +2,6 @@
   position: relative;
   height: 46.8vw;
 }
-
 .about-wrap {
   position: relative;
 }
@@ -195,7 +194,7 @@
 }
 
 .skill-box .click-skill a:hover {
-  color: black;
+  color: rgb(255, 0, 0);
 }
 
 .click h3 {
