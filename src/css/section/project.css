@@ -200,7 +200,23 @@
   color: var(--black200);
   font-size: 2vw;
 }
-
+#project-contribution {
+  display: none;
+}
+#project-contribution.on {
+  display: block;
+  text-align: left;
+  margin-left: 2vw;
+  margin-top: -3.7vw;
+  font-size: 1.1vw;
+  line-height: 2.1vw;
+}
+#project-contribution b a{
+  color: var(--main-color-blue);
+}
+#project-contribution b a:hover{
+  color: var(--black400);
+}
 
 @media screen and (max-width:960px) {
   #project {
@@ -306,5 +322,13 @@
   #project .swiper-button-prev {
     top: -19vw;
     margin-left: -14vw;
+  }
+  #project-contribution.on {
+    display: block;
+    text-align: left;
+    margin-left: 2vw;
+    margin-top: -3.7vw;
+    font-size: 2.5vw;
+    line-height: 5vw;
   }
 }
